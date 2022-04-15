@@ -1,108 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Valencia Tennis Club - Code Institute Milestone 4 Project**
+# **Introduction**
 
-Welcome USER_NAME,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## **Milestone Project 4** by Denis Hayes
+---
+* This project has been developed to fulfil the requirements of the Code Institute's Milestone Project 4.
+* This website's primary goal is to facilitate the operations of a tennis club, allowing users to manage their membership online.
+* This website uses the Django full stack framework, and as such, different functional 'Apps' exist within the website.
 
 ---
+## Live Website Access
+---
+Access the live website at: 
 
-Happy coding!
+---
+ ## **The Five Planes of UX Design**
+ ---
+ * This Readme is divided into different sections, with each section referring to one of the Five Planes of UX Design. 
+ * Some of the topics within each of the 5 sections unavoidably cross over into other planes. 
+ * Where a topic escapes the remit of the Five Planes, it will be included at the end of the document in the section called 'Appedix'.
+
+---
+ ## **Table of Contents**
+---
+
+# **Strategy** 
+ ## **The Aims of the Project**
+ ---
+* The primary aim of the project is to provide users with means to purchase a club membership, and then manage their membership online.
+* One secondary aim of the site is to allow users to book courts, reserving them for use at a specific time. 
+* Another secondary aim of the site is to allow users to join tournaments created by Admins. 
+---
+## **User Stories**
+---
+### **First Time User**
+* As a first time user I wish to be informed about Valencia Tennis Club and the services that it offers. This is achieved through the contents of the 'Info Section' on the home page. 
+* As a first time user I may wish to join the tennis club.
+* The first time user is invited to join the club in the 'Info Section' and is thereafter presented with the 'Membership' section.
+* The 'Membership Section' presents the first time user with several membership options, which can be selected to progress the user to the account creation stage.
+* A first time user is able to create an account using the 'Sign Up' template and form.
+* Should the first time user feel that they need more information about the club, or wish to visit the club in person, the 'Contact Section' provides an email address and the club's location. 
+
+### **Returning User**
+* As a user who has already created an account I wish to be able to easily access the site's content.
+* As a returning user I should be able to see and edit my personal information.
+* As a returning user I should be able to see any relevant information about my membership, any court bookings that I've made and any tournaments I have entered.
+* The returning user can log into the site using the 'Log In' navigation link.
+* Once logged in, the user is redirected to their 'Profile' which displays all relevant information in the 'Profile Display'. The information shown in the display can be changed by clicking on a different category, navigated using the 'Profile Sidebar'.
+* The returning user can view upcoming fixtures(tournaments) by navigating to the 'Fixtures Display'. The user can join the tournament by clicking the 'Join' button, if they match the criteria. 
+
+### **Administrative User**
+* As an Administrator it is important to me that I have the all the functionalities available to standard users while also having access to the tools required to properly manaage the website.
+* As an Administrator, I should have access to the site's database and be able to easily edit information as needed. This is achieved using Django's built in Admin features.
+* As an Administrator, I should be able to create a new tournament, and select the requirements for admission to that tournament. 
+---
+# **Scope** 
+ ## **Existing Features**
+ The following section details the existing features of the site, in their current implementation.
+ ---
+ ---
+ ## **Existing Features - Base**
+ * The following features are present on all site templates, as every template extends from base.html.
+ ---
+### **Favicon**
+* The Favicon is a small image of a tennis ball. The favicon is brightly coloured and has a distinct connection to the purpose of the site.
+### **Header**
+* The Header is present at all times when accessing the website, even as the user scrolls to the bottom of a template.
+* The Header displays the brand name, Valencia Tennis, prominently at all times. The brand name functions as a secondary 'Home' navigation link.
+* The Header displays a dynamic navigation menu, which serves as a user's primary method of moving to different templates within the site. These items change depending on whether the user is logged in or not. 
+* The Header's navigation links are replaced with a 'burger menu' icon on small screens. Clicking on this icon opens a sidenav which contains the same link elements as would be found on a large screen, displayed vertically.
+### **Footer**
+* The Footer, like the Header, is present at all times when accessing the website. Unlike the Header, the Footer is only visible when the user reaches the end of a template. Depending on a template's contents, the Footer may be immediately visible or may only be visible after scrolling.
+---
+ ## **Existing Features - Index**
+* This is the landing template for any user that visits the site for the first time.
+ ---
+### **Info Section**
