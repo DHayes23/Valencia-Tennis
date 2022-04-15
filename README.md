@@ -74,4 +74,10 @@ Access the live website at:
  ## **Existing Features - Index**
 * This is the landing template for any user that visits the site for the first time.
  ---
+### **Hero Image**
+* The Hero Image quickly informs the user of the nature of the site.
+* The Hero Image is hidden on smaller devices, allowing for a more focused, to-the-point style of presentation.
 ### **Info Section**
+* The Info Section displays some of the key information about Valencia Tennis Club.
+* The About Valencia Tennis text gives an overview of the club's main features, to quickly bring the new user up to speed on what this website is all about.
+* The 3 cards displayed to the left of(or underneath on mobile) the About Valencia Tennis give further information to the new user, and markets the benefits of tennis and this club in particular to them.
