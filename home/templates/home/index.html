@@ -2,5 +2,199 @@
 {% load static %}
 
 {% block content %}
-    <h2>All about Valencia Tennis</h2>
+
+<section>
+    <div class="row" id="hero-image-container">
+      <img src="assets/images/hero-image-3.webp" alt="" id="hero-image">
+    </div>
+  </section>
+
+<section id="info-section">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 left show-on-medium-and-down hide-on-large-only" id="small-screen-info">
+          <h1 class="center-align">About Valencia Tennis</h1>
+          <p class="center-align">Valencia Tennis Club is Valencia's premiere tennis venue. Nestled beside the Turia River Park, the 4 clay courts of the club provide year round play for
+            members of all levels.
+            Start your membership today to immediately get access to our courts, competitions, club events and more. We look forward to seeing you on the court.</p>
+        </div>
+        <div class="col s12 l6">
+          <div class="col s12 l6">
+            <div class="card info-card">
+              <div class="card-content black-text">
+                <span class="card-title center-align"><i class="fa-solid fa-dumbbell fa-2x info-card-icon"></i></span>
+                <span class="card-title center-align"><strong>Fitness</strong></span>
+                <p>Get the full body workout you need without tedious reps and sets! (OK, maybe there are <i>some</i> sets...) Tennis allows you to get your daily exercise in, all while
+                  having fun!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6">
+            <div class="card info-card" id="offset-card">
+              <div class="card-content black-text">
+                <span class="card-title center-align"><i class="fa-solid fa-people-group fa-2x info-card-icon"></i></span>
+                <span class="card-title center-align"><strong>Community</strong></span>
+                <p>Our club is home to players of all levels who want to enjoy the game and make friends. Playing with us is a great way to get involved with your local community, and we
+                  can't wait to meet you!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l6 left-align hide-on-med-and-down" id="info-text">
+          <h1 id="info-heading">About Valencia Tennis</h1>
+          <!-- <h3 class="left-align">Who We Are</h3> -->
+          <p>Valencia Tennis Club is Valencia's premiere tennis venue. Nestled beside the Turia River Park, the 4 clay courts of the club provide year round play for members of all levels.
+            Start your membership today to immediately get access to our courts, competitions, club events and more. We look forward to seeing you on the court.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l6">
+          <div class="col s12 l6">
+            <div class="card info-card">
+              <div class="card-content black-text">
+                <span class="card-title center-align"><i class="fa-solid fa-trophy fa-2x info-card-icon"></i></i></span>
+                <span class="card-title center-align"><strong>Competition</strong></span>
+                <p>If you want to improve your game and you're up for a challenge, why not join one of our club competitions? We host events and tournaments all year round on a regular
+                  basis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="membership-scroll-helper"></div>
+  </section>
+
+  <section id="membership-section">
+    <div id="membership-text">
+      <h1 class="center-align" id="membership-heading">Membership</h1>
+      <h2 class="center-align" id="membership-sub-heading">Choose a membership option to suit your needs.</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l4">
+          <div class="card membership-card">
+            <div class="card-content black-text">
+              <h3 class="center-align membership-card-heading">Junior</h3>
+              <span class="card-title center-align membership-card-price"><strong>€50</strong></span>
+              <ol class="membership-card-features">
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Available to Ages 5-14</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Year Long Membership</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Full Court Access</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Access to Junior Competitions</li>
+              </ol>
+              <div class="center-align">
+                <button class="highlighted-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span> <a href="">Join Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l4">
+          <div class="card membership-card">
+            <div class="card-content black-text">
+              <h3 class="center-align membership-card-heading">Student</h3>
+              <span class="card-title center-align membership-card-price"><strong>€75</strong></span>
+              <ol class="membership-card-features">
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Available to Ages 15-20</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Year Long Membership</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Full Court Access</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Access to Senior Competitions</li>
+              </ol>
+              <div class="center-align">
+                <button class="highlighted-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span> <a href="">Join Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l4">
+          <div class="card membership-card">
+            <div class="card-content black-text">
+              <h3 class="center-align membership-card-heading">Standard</h3>
+              <span class="card-title center-align membership-card-price"><strong>€150</strong></span>
+              <ol class="membership-card-features">
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Available to All Ages</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Year Long Membership</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Full Court Access</li>
+                <li class="left-align membership-card-text"><i class="fa-solid fa-square-check"></i> Access to Senior Competitions</li>
+              </ol>
+              <div class="center-align">
+                <button class="highlighted-button">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span> <a href="">Join Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="booking-scroll-helper"></div>
+
+  <section id="booking-section">
+    <div class="container">
+      <h1 id="booking-heading" class="center-align">Book a Court</h1>
+      <h4 id="booking-sub-heading" class="center-align">Members can book a court using our booking system</h4>
+      <div class="center-align">
+        <button id="booking-button">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l6">
+          <div class="mapouter show-on-large hide-on-med-and-down">
+            <div class="gmap_canvas"><iframe width="500" height="500" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=Valencia,%20Carrer%20de%20Cavanilles,%207&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"></iframe></div>
+          </div>
+        </div>
+        <div class="col s12 l6">
+          <h1 id="contact-heading">Contact Us</h1>
+          <h2 id="contact-sub-heading">We'd love to hear from you!</h2>
+          <ul class="fa-ul">
+            <li class="contact-list-heading">
+              <i class="fa-li fa-solid fa-location-dot fa-2x contact-list-icon"></i>Valencia Tennis Club
+            </li>
+            <li class="contact-list-item">
+              <a id="contact-address-link" href="https://goo.gl/maps/4nkrDTnHUSApAw9q8" target="_blank">Carrer de Cavanilles, 7, 46010 València, Spain</a>
+            </li>
+          </ul>
+          <ul class="fa-ul">
+            <li class="contact-list-heading">
+              <i class="fa-li fa-solid fa-envelope fa-2x contact-list-icon"></i>Email Us
+            </li>
+            <li class="contact-list-item">
+              <a id="contact-email-link" href="mailto:valenciatennis@gmail.com" target="_blank">valenciatennis@gmail.com</a>
+            </li>
+          </ul>
+          <ul class="fa-ul">
+            <li class="contact-list-heading">
+              <i class="fa-li fa-solid fa-clock fa-2x contact-list-icon"></i>Time
+            </li>
+            <li class="contact-list-item">
+              9AM-10PM Mon - Sun
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock%}
