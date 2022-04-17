@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Poiret+One&family=Righteous&display=swap');
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  max-width: 100vw;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+/* NAVBAR */
+
+.navbar-fixed {
+  z-index: 998; 
+}
+
+#main-nav {
+  background-color: rgb(27, 32, 40);  
+  height: 100px;
+}
+
+#main-logo {
+  font-size: 3.5rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-shadow: 2px 2px rgb(0, 0, 0) ;
+  font-family: Poiret One;
+  font-weight: bold;
+  color: orangered !important;
+}
+
+.nav-item {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-right: 0px;
+  padding: 0;
+  text-shadow: 2px 2px rgb(0, 0, 0) ;
+  font-family: Poiret One;
+  font-weight: bold;
+}
+
+.nav-item:last-child {
+  margin-right: 30px;
+}
+
+#main-nav .nav-item:hover {
+  border-bottom: 1px rgb(255, 255, 255) solid;
+  border-top: 1px rgb(255, 255, 255) solid;
+  background-color: rgba(63, 57, 57, 0);
+  color: orangered !important;
+}
+
+.active {
+  border-bottom: 1px rgb(255, 255, 255) solid;
+  border-top: 1px rgb(255, 255, 255) solid;
+}
+
+/* SIDENAV */
+
+#burger-menu {
+  margin: 25px;
+  color: orangered;
+}
+
+.sidenav {
+  background-color: rgb(240, 240, 240);
+  margin-top: 100px;
+  width: fit-content;
+}
+
+.sidenav-items li a{
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-top: 30px;
+}
+
+#mobile-sidenav li a i {
+  color: orangered;
+}
+
+/* HERO IMAGE */
+
+#hero-image {
+  position: absolute;
+  top: 0;
+  margin-top: 100px;
+  z-index: -1;
+  width: 100%;
+  height: 450px;
+}
+
+/* INFO SECTION */
+
+#info-section {
+  margin-top: 425px;
+  padding-top: 100px;
+  }
+
+#small-screen-info {
+  margin-bottom: 40px;
+}
+
+#small-screen-info h1{
+  margin-bottom: 50px;
+  color: orangered;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+#small-screen-info p{
+  font-size: 1.5rem;
+}
+
+#info-text {
+  position: relative;
+  top: 150px;
+  left: 150px;
+}
+
+#info-text h1 {
+  color: orangered;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  font-size: 4rem;
+}
+
+#info-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.info-card {
+  height: 400px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 18px;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  background: rgb(252, 252, 252);
+  border-radius: 50px;
+  box-shadow: 15px 15px 25px rgb(160, 160, 160),
+  -5px -5px 15px rgb(160, 160, 160),
+  inset -5px -5px 10px rgb(189, 189, 189);
+}
+
+.info-card-icon {
+  color: orangered;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+#offset-card {
+  position: relative;
+  top: 200px;
+  margin-left: 30px;
+}
+
+/* MEMBERSHIP SECTION */
+
+#membership-scroll-helper {
+  height: 57px;
+  visibility: hidden;
+}
+
+#membership-section {
+  margin-top: 25px ;
+  padding-bottom: 100px;
+  /* background-image: url(media/membership-section.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+#membership-text {
+  background-color: rgba(57, 122, 165, 0.3);  
+  backdrop-filter: blur(50px);
+
+}
+
+#membership-heading {
+color: orangered;
+font-weight: bold;
+padding-top: 25px;
+text-shadow: 1px 1px rgb(0, 0, 0);
+margin-bottom: 25px;
+font-family: Poiret One;
+}
+
+#membership-sub-heading {
+color: rgb(255, 255, 255);
+text-shadow: 1px 1px rgb(0, 0, 0);
+margin-bottom: 100px;
+padding-bottom: 25px;
+font-family: Poiret One;
+}
+
+.membership-card {
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+  background-color: rgba(57, 122, 165, 0.5);  
+  backdrop-filter: blur(50px);
+}
+
+.membership-card-heading {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.membership-card-price {
+  color: rgb(255, 69, 0);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-size: 2.3rem !important;
+}
+
+.membership-card-features {
+list-style-type: none;
+text-decoration: none;
+margin: 10px;
+padding: 10px;
+font-size: 1.5rem;
+color: rgb(255, 255, 255);
+text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.membership-card-text {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.highlighted-button {
+margin-top: 25px;
+}
+
+.highlighted-button {
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121 !important;
+  color: rgb(255, 69, 0);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+ }
+ 
+ .highlighted-button:hover {
+  box-shadow: 0 0 10px rgb(255, 69, 0), 0 0 25px rgb(255, 69, 0), 0 0 50px rgb(255, 69, 0);
+  transition-delay: 0.6s;
+ }
+ 
+ .highlighted-button span {
+  position: absolute;
+ }
+ 
+ .highlighted-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(255, 69, 0));
+ }
+ 
+ .highlighted-button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+ }
+ 
+ .highlighted-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(255, 69, 0));
+ }
+ 
+ .highlighted-button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+ }
+ 
+ .highlighted-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(255, 69, 0));
+ }
+ 
+ .highlighted-button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+ }
+ 
+ .highlighted-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgb(255, 69, 0));
+ }
+ 
+ .highlighted-button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.5s;
+  transition-delay: 0.52s;
+ }
+ 
+ .highlighted-button:active {
+  background: rgb(255, 255, 255);
+  color: #ffffff;
+ }
+ 
+ .highlighted-button:active span:nth-child(1) 
+ span:nth-child(2) 
+ span:nth-child(2) 
+ span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+ }
+
+ .highlighted-button a {
+   color: orangered;
+ }
+
+ .highlighted-button a:hover {
+   color: white;
+ }
+
+/* BOOKING SECTION */
+
+#booking-scroll-helper {
+  background-color: rgb(240, 240, 240);
+  height: 1px;
+}
+
+#booking-heading {
+  margin-top: 0;
+  padding-top: 125px;
+  color: orangered;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+#booking-sub-heading {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#booking-button {
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 150px;
+  color: orangered;
+  padding: 0.7em 1.7em;
+  font-size: 2rem;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #a3a3a3,
+    -6px -7px 12px #ffffff;
+  font-weight: bold;
+ }
+
+ #booking-button:hover {
+   color: orangered;
+   font-size: 2.3rem;
+ }
+ 
+ #booking-button:active {
+  color: orangered;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+  font-size: 1.7rem;
+ }
+
+/* CONTACT SECTION */
+
+#contact-section {
+  height: 1000px;
+  /* background-image: url(../images/contact2.webp); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mapouter {
+  position:relative;
+  text-align:right;
+  height:500px;
+  width:500px;
+  margin-top: 250px;
+  margin-bottom: auto;
+}
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:500px;
+}
+
+#contact-heading {
+  margin-top: 250px;
+  color: rgb(255, 69, 0);
+  font-family: Comfortaa;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+#contact-sub-heading {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.contact-list-heading {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-size: 1.3rem;
+}
+
+.contact-list-item {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  margin-bottom: 50px;
+}
+
+.contact-list-icon {
+  color: rgb(255, 69, 0);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+#contact-address-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+#contact-address-link:hover {
+  color: rgb(255, 165, 0) !important;
+}
+
+#contact-email-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+#contact-email-link:hover {
+  color: rgb(255, 165, 0) !important;
+}
+
+/* FOOTER */
+
+#main-footer {
+  color: white;
+  background-color: rgb(27, 32, 40);
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+#copyright-text {
+  padding-top: 40px;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIUM SCREENS */
+
+@media (max-width: 992px) {
+
+/* NAVBAR */
+
+
+  #main-logo {
+    font-size: 3rem;
+}
+
+/* INFO SECTION */
+
+  #offset-card {
+    top: 0px;
+    margin-left: auto;
+  }
+
+  .info-card {
+    height: 400px;
+    width: 325px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+
+/* MEMBERSHIP SECTION */
+
+  .membership-card:last-of-type {
+    margin-bottom: 100px;
+  }
+
+
+/* CONTACT SECTION */
+
+  #contact-section {
+    height: 600px;
+  }
+
+  #contact-heading {
+    margin-top: 100px;
+  }
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 425px) {
+
+  #main-logo {
+    font-size: 2rem;
+  }
+
+  .sidenav {
+    width: 100%;
+  }
+
+  .sidenav-items li a{
+    font-size: 1.4rem;
+    margin: 20px;
+  }
+
+  #hero-image {
+    visibility: hidden;
+  }
+
+  #info-section {
+    margin-top: 0;
+  }
+
+  .info-card {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  #membership-section {
+    padding-bottom: 10px;
+    }
+
+  #membership-heading {
+    font-size: 4rem;
+  }
+
+  #membership-sub-heading {
+    font-size: 2.1rem;
+  }
+
+  .membership-card-heading {
+    font-size: 2.4rem;
+  }
+
+  .membership-card-price {
+    font-size: 2.2rem;
+  }
+
+  .membership-card-text {
+    font-size: 1rem;
+  }
+  
+  #booking-heading {
+    font-size: 4rem;
+  }
+
+  #booking-sub-heading {
+    font-size: 1.7rem;
+  }
+
+  #booking-button {
+    font-size: 1.5rem;
+  }
+
+  #booking-button:hover {
+    font-size: 2rem;
+  }
+
+  #booking-button:active {
+    font-size: 1.5rem;
+  }
+
+  #contact-section {
+    height: 680px;
+  }
+
+  #contact-heading {
+    font-size: 4rem;
+    margin-bottom: 5px;
+  }
+
+  #contact-sub-heading {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
