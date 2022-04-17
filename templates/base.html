@@ -25,28 +25,8 @@
 <body>
     <header>
         <div class="navbar-fixed">
-          <nav id="main-nav">
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo left white-text" id="main-logo"> Valencia Tennis</a>
-              <a href="#" data-target="mobile-sidenav" class="sidenav-trigger right"><i id="burger-menu" class="fa-solid fa-bars fa-3x"></i></a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="white-text nav-item active" href="">Home</a></li>
-                <li><a class="white-text nav-item" href="#membership-scroll-helper">Membership</a></li>
-                <li><a class="white-text nav-item" href="#booking-scroll-helper">Booking</a></li>
-                <li><a class="white-text nav-item" href="">Sign Up</a></li>
-                <li><a class="white-text nav-item" href="">Log In</a></li>
-              </ul>
-            </div>
-          </nav>
-          <ul id="mobile-sidenav" class="sidenav sidenav-items">
-            <li><a class="sidenav-close" href="#!"><i class="fa-solid fa-x red-text"></i>Close</a></li>
-            <li><a href="" class="sidenav-close"><i class="fa-solid fa-house sidenav-icon"></i>Home</a></li>
-            <li><a href="#membership-scroll-helper" class="sidenav-close"><i class="fa-solid fa-address-card sidenav-icon"></i>Membership</a></li>
-            <li><a href="#booking-section" class="sidenav-close"><i class="fa-solid fa-calendar"></i>Booking</a></li>
-            <li><a href="#contact-section" class="sidenav-close"><i class="fa-solid fa-message"></i>Contact</a></li>
-            <li><a href="" class="sidenav-close"><i class="fa-solid fa-user-plus sidenav-icon"></i>Sign Up</a></li>
-            <li><a href="" class="sidenav-close"><i class="fa-solid fa-right-to-bracket sidenav-icon"></i>Log In</a></li>
-          </ul>
+          {% include 'includes/main-nav.html' %}
+          {% include 'includes/mobile-nav.html' %}
         </div>
       </header>
 
