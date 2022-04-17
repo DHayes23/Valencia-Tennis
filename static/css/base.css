@@ -172,7 +172,7 @@ body {
 #membership-section {
   margin-top: 25px ;
   padding-bottom: 100px;
-  /* background-image: url(media/membership-section.jpg); */
+  background-image: url(/media/membership-section.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -396,7 +396,7 @@ margin-top: 25px;
 
 #contact-section {
   height: 1000px;
-  /* background-image: url(../images/contact2.webp); */
+  background-image: url(/media/contact-section.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
