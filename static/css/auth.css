@@ -72,3 +72,8 @@ label.active {
 #forgot-password:hover {
     border-bottom: 1px solid black;
 }
+
+#password-reset-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
