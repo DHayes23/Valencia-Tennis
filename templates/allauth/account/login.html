@@ -3,11 +3,15 @@
 {% load i18n %}
 {% load account socialaccount %}
 
+
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+<link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+
 
 {% get_providers as socialaccount_providers %}
 
@@ -23,24 +27,40 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   </ul>
 
   <div class="login-or">{% trans 'or' %}</div>
+  <input type="checkbox">
 
 </div>
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
 
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
+<section>
+  <div class="container">
+    <div class="auth-panel">
+      <h1 class="auth-heading center-align">{% trans "Log In" %}</h1>
+        {% endif %}
+      
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <p>
+            <label>
+              <input id="indeterminate-checkbox" type="checkbox" />
+              <span></span>
+            </label>
+          </p>
+          <div class="center-align">
+            <button class="primaryAction auth-button" type="submit">{% trans "Log In" %}</button>
+            <br>
+            <a id="forgot-password" class="button" href="{% url 'account_reset_password' %}">{% trans "Forgotten your Password?" %}</a>
+          </div>          
+        </form>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
