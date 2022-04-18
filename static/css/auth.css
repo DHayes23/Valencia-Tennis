@@ -1,0 +1,74 @@
+.auth-panel {
+    height: 600px;
+    margin-left: 25%;
+    width: 50%;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    padding: 30px;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    background: rgb(252, 252, 252);
+    border-radius: 50px;
+    box-shadow: 15px 15px 25px rgb(160, 160, 160),
+    -5px -5px 15px rgb(160, 160, 160),
+    inset -5px -5px 10px rgb(189, 189, 189);
+    z-index: 9999;
+}
+
+.auth-heading {
+    color: orangered;
+    text-shadow: 2px 2px black;
+}
+
+#id_login {
+    font-size: 1.2rem;
+}
+#id_password {
+    font-size: 1.2rem;
+}
+
+.auth-button {
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: orangered;
+    padding: 0.7em 1.7em;
+    font-size: 1.7rem;
+    border-radius: 0.5em;
+    background: #ececec;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #a3a3a3,
+      -6px -7px 12px #ffffff;
+    font-weight: bold;
+}
+
+.auth-button:hover {
+    color: orangered;
+    cursor: pointer;
+}
+  
+.auth-button:active {
+    color: black;
+    background-color: #d3d3d3;
+    box-shadow: inset 4px 4px 12px ,
+    inset -4px -4px 12px #ffffff;
+    font-size: 1.6rem;
+}
+
+label.active {
+    color: orangered;
+    font-size: 1.6rem;
+}
+
+#id_remember label{
+    display: none;
+}
+
+#forgot-password {
+    color: black;
+}
+
+#forgot-password:hover {
+    border-bottom: 1px solid black;
+}
