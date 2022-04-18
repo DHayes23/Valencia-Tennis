@@ -5,17 +5,31 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+<link rel="icon" type="image/x-icon" href="/media/favicon.ico">
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+<section>
+  <div class="container">
+    <div class="auth-panel">
+      <h1 class="center-align auth-heading">{% trans "Sign Up" %}</h1>
+
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <div class="center-align">
+        <button type="submit" class="auth-button">{% trans "Sign Up" %}</button>
+      </div>
+      </form>
+    </div>
+    
+  </div>
+ 
+</section>
+
 
 {% endblock %}
