@@ -6,8 +6,22 @@
         <li><a class="white-text nav-item active" href="">Home</a></li>
         <li><a class="white-text nav-item" href="#membership-scroll-helper">Membership</a></li>
         <li><a class="white-text nav-item" href="#booking-scroll-helper">Booking</a></li>
-        <li><a class="white-text nav-item" href="{% url 'account_signup' %}">Sign Up</a></li>
-        <li><a class="white-text nav-item" href="{% url 'account_login' %}">Log In</a></li>
+        {% if request.user.is_authenticated %}
+          <li><a class="white-text nav-item" href="{% url 'account_login' %}">My Profile</a></li>
+          <li><a id="signOutLink" class="white-text nav-item">Log Out</a></li>
+
+          <!-- The following form element allows for one-click logout, thereby bypassing the need to verify with the user whether or not they want to logout. -->
+          <form style='display: none;' method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="/"/>
+            <button id="signOutBtn" type="submit">Logout</button>
+          </form>
+
+        {% else %}
+          <li><a class="white-text nav-item" href="{% url 'account_signup' %}">Sign Up</a></li>
+          <li><a class="white-text nav-item" href="{% url 'account_login' %}">Log In</a></li>
+        {% endif %}
+        
       </ul>
     </div>
   </nav>
