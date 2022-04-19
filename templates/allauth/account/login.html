@@ -34,9 +34,10 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% else %}
 
-<section>
+<section id="login-section">
   <div class="container">
     <div class="auth-panel">
+      
       <h1 class="auth-heading center-align">{% trans "Log In" %}</h1>
         {% endif %}
       
@@ -58,6 +59,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
             <a id="forgot-password" class="button" href="{% url 'account_reset_password' %}">{% trans "Forgotten your Password?" %}</a>
           </div>          
         </form>
+
     </div>
   </div>
 </section>
