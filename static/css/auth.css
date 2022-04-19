@@ -20,6 +20,11 @@
     text-shadow: 2px 2px black;
 }
 
+.auth-paragraph {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
 #id_login {
     font-size: 1.2rem;
 }
