@@ -5,8 +5,8 @@
     <li><a href="#booking-section" class="sidenav-close"><i class="fa-solid fa-calendar"></i>Booking</a></li>
     <li><a href="#contact-section" class="sidenav-close"><i class="fa-solid fa-message"></i>Contact</a></li>
     {% if request.user.is_authenticated %}
-    <li><a class="sidenav-close" href="{% url 'account_login' %}"><i class="fa-solid fa-user-plus sidenav-icon"></i>My Profile</a></li>
-    <li><a id="signOutLink" class="sidenav-close">Log Out<i class="fa-solid fa-user-plus sidenav-icon"></i></a></li>
+    <li><a class="sidenav-close" href="{% url 'account_login' %}"><i class="fa-solid fa-user sidenav-icon"></i>My Profile</a></li>
+    <li><a id="signOutLink" class="sidenav-close">Log Out<i class="fa-solid fa-right-from-bracket sidenav-icon"></i></a></li>
     {% else %}
     <li><a href="{% url 'account_signup' %}" class="sidenav-close"><i class="fa-solid fa-user-plus sidenav-icon"></i>Sign Up</a></li>
     <li><a href="{% url 'account_login' %}" class="sidenav-close"><i class="fa-solid fa-right-to-bracket sidenav-icon"></i>Log In</a></li>

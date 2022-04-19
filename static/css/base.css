@@ -87,6 +87,10 @@ body {
   color: orangered;
 }
 
+#signOutLink {
+  cursor: pointer;
+}
+
 /* HERO IMAGE */
 
 #hero-image {
