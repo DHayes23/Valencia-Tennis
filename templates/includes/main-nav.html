@@ -1,9 +1,9 @@
 <nav id="main-nav">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo left white-text" id="main-logo"> Valencia Tennis</a>
+      <a href="{% url 'home' %}" class="brand-logo left white-text" id="main-logo"> Valencia Tennis</a>
       <a href="#" data-target="mobile-sidenav" class="sidenav-trigger right"><i id="burger-menu" class="fa-solid fa-bars fa-3x"></i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="white-text nav-item active" href="">Home</a></li>
+        <li><a class="white-text nav-item active" href="{% url 'home' %}">Home</a></li>
         <li><a class="white-text nav-item" href="#membership-scroll-helper">Membership</a></li>
         <li><a class="white-text nav-item" href="#booking-scroll-helper">Booking</a></li>
         {% if request.user.is_authenticated %}
