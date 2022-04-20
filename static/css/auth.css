@@ -1,3 +1,5 @@
+/* auth.css is used to style many of the elements in modified allauth templates. */
+
 .auth-panel {
     height: fit-content;
     margin-left: 25%;
@@ -39,7 +41,7 @@
     padding: 0.7em 1.7em;
     font-size: 1.7rem;
     border-radius: 0.5em;
-    background: #ececec;
+    background: #ececec !important;
     border: 1px solid #e8e8e8;
     transition: all .3s;
     box-shadow: 6px 6px 12px #a3a3a3,
@@ -91,6 +93,15 @@ label.active {
     font-size: 1.2rem;
 }
 
+#verification-section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#verification-section .auth-heading{
+    font-size: 3.5rem;
+}
+
 
 
 /* MEDIA QUERIES */
@@ -136,6 +147,11 @@ label.active {
     #password-reset-section .auth-button {
         font-size: 1.2rem;
     }
+
+    #verification-section {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
 }
 
 /* EXTRA LARGE SCREENS */
@@ -165,6 +181,11 @@ label.active {
 
     #password-reset-section .auth-button {
         font-size: 1.8rem;
+    }
+
+    #verification-section {
+        padding-top: 275px;
+        padding-bottom: 275px;
     }
     
 }
