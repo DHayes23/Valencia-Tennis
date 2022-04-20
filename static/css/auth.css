@@ -12,7 +12,6 @@
     box-shadow: 15px 15px 25px rgb(160, 160, 160),
     -5px -5px 15px rgb(160, 160, 160),
     inset -5px -5px 10px rgb(189, 189, 189);
-    z-index: 9999;
 }
 
 .auth-heading {
@@ -79,6 +78,93 @@ label.active {
 }
 
 #password-reset-section {
-    padding-top: 75px;
+    padding-top: 100px;
     padding-bottom: 75px;
+}
+
+#password-reset-section .auth-heading {
+    font-size: 2.2rem;
+    text-shadow: 1px 1px black;
+}
+
+#password-reset-section .auth-button {
+    font-size: 1.2rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* SMALL SCREENS */
+
+@media (max-width: 425px) {
+
+    .auth-panel {
+        height: fit-content;
+        margin-left: 2.5%;
+        width: 95%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-top: 10px;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .auth-heading {
+        font-size: 2.5rem;
+        text-shadow: 1px 1px black;
+        margin-top: 10px;
+
+    }
+
+    #login-section {
+        margin-top: 135px;
+        margin-bottom: 150px;
+    }
+
+    #signup-section {
+        margin-top: 125px;
+        margin-bottom: 100px;
+    }
+
+    #password-reset-section {
+        margin-top: 125px;
+        margin-bottom: 100px;
+    }
+
+    #password-reset-section .auth-button {
+        font-size: 1.2rem;
+    }
+}
+
+/* EXTRA LARGE SCREENS */
+
+@media (min-width: 2000px) {
+
+
+    #login-section {
+        margin-top: 300px;
+        margin-bottom: 300px;
+    }
+
+    #signup-section {
+        margin-top: 275px;
+        margin-bottom: 250px;
+    }
+
+    #password-reset-section {
+        margin-top: 170px;
+        margin-bottom: 200px;
+    }
+
+    #password-reset-section .auth-heading {
+        font-size: 3rem;
+        text-shadow: 1px 1px black;
+    }
+
+    #password-reset-section .auth-button {
+        font-size: 1.8rem;
+    }
+    
 }
