@@ -351,24 +351,24 @@ margin-top: 25px;
 
 /* BOOKING SECTION */
 
-#booking-scroll-helper {
+#store-scroll-helper {
   background-color: rgb(240, 240, 240);
   height: 1px;
 }
 
-#booking-heading {
+#store-heading {
   margin-top: 0;
   padding-top: 125px;
   color: orangered;
   text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
-#booking-sub-heading {
+#store-sub-heading {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-#booking-button {
+#store-button {
   border: none;
   margin-top: 40px;
   margin-bottom: 150px;
@@ -384,12 +384,12 @@ margin-top: 25px;
   font-weight: bold;
  }
 
- #booking-button:hover {
+ #store-button:hover {
    color: orangered;
    font-size: 2.3rem;
  }
  
- #booking-button:active {
+ #store-button:active {
   color: orangered;
   box-shadow: inset 4px 4px 12px #c5c5c5,
     inset -4px -4px 12px #ffffff;
@@ -581,23 +581,23 @@ margin-top: 25px;
     font-size: 1rem;
   }
   
-  #booking-heading {
+  #store-heading {
     font-size: 4rem;
   }
 
-  #booking-sub-heading {
+  #store-sub-heading {
     font-size: 1.7rem;
   }
 
-  #booking-button {
+  #store-button {
     font-size: 1.5rem;
   }
 
-  #booking-button:hover {
+  #store-button:hover {
     font-size: 2rem;
   }
 
-  #booking-button:active {
+  #store-button:active {
     font-size: 1.5rem;
   }
 
