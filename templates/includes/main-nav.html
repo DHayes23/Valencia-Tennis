@@ -5,7 +5,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="white-text nav-item active" href="{% url 'home' %}">Home</a></li>
         <li><a class="white-text nav-item" href="#membership-scroll-helper">Membership</a></li>
-        <li><a class="white-text nav-item" href="#store-scroll-helper">Store</a></li>
+        <li><a class="white-text nav-item" href="{% url 'products' %}">Store</a></li>
         {% if request.user.is_authenticated %}
           <li><a class="white-text nav-item" href="{% url 'account_login' %}">My Profile</a></li>
           <li><a id="signOutLink" class="white-text nav-item">Log Out</a></li>

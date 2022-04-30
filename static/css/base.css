@@ -349,7 +349,7 @@ margin-top: 25px;
    color: white;
  }
 
-/* BOOKING SECTION */
+/* STORE SECTION */
 
 #store-scroll-helper {
   background-color: rgb(240, 240, 240);
@@ -394,6 +394,10 @@ margin-top: 25px;
   box-shadow: inset 4px 4px 12px #c5c5c5,
     inset -4px -4px 12px #ffffff;
   font-size: 1.7rem;
+ }
+
+ #store-button a {
+   color: orangered;
  }
 
 /* CONTACT SECTION */
