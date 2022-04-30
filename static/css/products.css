@@ -1,6 +1,7 @@
 #products-heading {
     margin-top: 100px;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid orangered;
+    padding-bottom: 40px;
 }
 
 .product-card {
