@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+
+<section id="products-section">
+    <div class="">
+        </div>
+        <div class="row">
+            <div class="col s12 m6 xl4">
+                <div class="card product-detail-card hoverable">
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <div class="card-image">
+                            <img class="product-detail-card-image" src="{{ product.image.url }}">
+                            <div class="card-content">
+                                <p class="center-align"><strong>Click to enlarge!</strong></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col s12 m6 xl6">
+                <h2 class="product-detail-heading">{{ product.name }}</h2>
+                <h3 class="product-detail-price">€{{ product.price }}</h3>
+                <p class="product-detail-description">{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

@@ -17,15 +17,15 @@
             {% for product in products %}
                 <div class="col s12 m6 xl4">
                   <div class="card product-card hoverable">
-                    <div class="card-image">
-                      <img class="product-card-image" src="{{ product.image.url }}">
-                         <div class="card-content">
-                            <p class="product-card-price">€{{product.price}}</p>
-                            <p class="product-card-name">{{product.name}}</p>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <div class="card-image">
+                            <img class="product-card-image" src="{{ product.image.url }}">
+                            <div class="card-content">
+                                <p class="product-card-price">€{{product.price}}</p>
+                                <p class="product-card-name">{{product.name}}</p>
+                            </div>
                         </div>
-                         
-                    </div>
-                    
+                    </a>
                   </div>
                 </div>
             {% endfor %}
