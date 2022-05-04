@@ -4,7 +4,7 @@
 ## **Milestone Project 4** by Denis Hayes
 ---
 * This project has been developed to fulfil the requirements of the Code Institute's Milestone Project 4.
-* This website's primary goal is to facilitate the operations of a tennis club, allowing users to manage their membership online.
+* This website's primary goal is to facilitate the operations of a tennis club, allowing users to manage their membership online and make purchases on the clubs online store.
 * This website uses the Django full stack framework, and as such, different functional 'Apps' exist within the website.
 
 ---
