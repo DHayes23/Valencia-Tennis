@@ -27,8 +27,9 @@ Access the live website at:
  ## **The Aims of the Project**
  ---
 * The primary aim of the project is to provide users with means to purchase a club membership, and then manage their membership online.
-* One secondary aim of the site is to allow users to book courts, reserving them for use at a specific time. 
-* Another secondary aim of the site is to allow users to join tournaments created by Admins. 
+* Secondary Aims:
+  * To allow users to make purchases on the club's online store. 
+  * To allow users to join tournaments created by Admins. 
 ---
 ## **User Stories**
 ---
