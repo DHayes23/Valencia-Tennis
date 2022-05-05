@@ -96,7 +96,6 @@ body {
 #hero-image-container {
   width: 100%;
   height: 450px;
-  z-index: 998;
 }
 
 #hero-image {
@@ -107,7 +106,7 @@ body {
   height: 450px;
   background-image: url(/media/hero-image-3.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:contain;
 }
 
 /* INFO SECTION */
