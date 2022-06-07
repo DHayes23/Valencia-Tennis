@@ -13,4 +13,9 @@ $(document).ready(function(){
   // The following function initialises all Materialize JS components.
   $(document).ready(function(){
     $('.sidenav').sidenav();
+    $('.dropdown-trigger').dropdown(
+      {
+        'constrainWidth': false,
+      }
+    );
   });
