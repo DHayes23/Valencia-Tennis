@@ -24,7 +24,7 @@
                 <h2 class="product-detail-heading">{{ product.name }}</h2>
                 <h3 class="product-detail-price">€{{ product.price }}</h3>
                 <p class="product-detail-description">{{ product.description }}</p>
-                <form class="form" action="" method="POST">
+                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
                         <div class="col s12 m12">
