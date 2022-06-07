@@ -5,57 +5,59 @@
 <link rel="stylesheet" href="{% static 'css/cart.css' %}">
 
 <div class="row">
-  <div class="col s12 center-align">
-    <h1 id="cart-heading">Your Cart</h1>
+  <div class="container">
+    <div class="col s12 center-align">
+      <h1 id="cart-heading">Your Cart</h1>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col s12">
-    {% if bag_items %}
-      <div>
-        <table class="responsive-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
-            </tr>
-          </thead>
+  <div class="row">
+    <div class="col s12">
+      {% if bag_items %}
+        <div>
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td>Alvin</td>
-              <td>Eclair</td>
-              <td>$0.87</td>
-            </tr>
-            <tr>
-              <td>Alan</td>
-              <td>Jellybean</td>
-              <td>$3.76</td>
-            </tr>
-            <tr>
-              <td>Jonathan</td>
-              <td>Lollipop</td>
-              <td>$7.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    {% else %}
-      <div class="center-align">
-        <div class="empty-cart-panel">
-          <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
-          <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
-          <button id="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    {% endif %}
+      {% else %}
+        <div class="center-align">
+          <div class="empty-cart-panel">
+            <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
+            <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
+            <button id="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+          </div>
+        </div>
+      {% endif %}
 
-    <div>
+      <div>
+
+      </div>
 
     </div>
-
   </div>
 </div>
 
