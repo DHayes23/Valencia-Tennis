@@ -62,4 +62,35 @@
    #cart-store-button a {
      color: orangered;
    }
-  
+
+
+/* MEDIA QUERIES */
+
+/* SMALL SCREENS */
+
+@media (max-width: 425px) {
+
+    .empty-cart-panel {
+        height: fit-content;
+        margin-left: 2.5%;
+        width: 95%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-top: 10px;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    #cart-store-button {
+    font-size: 1.5rem;
+    }
+
+    #cart-store-button:hover {
+    font-size: 2rem;
+    }
+
+    #cart-store-button:active {
+    font-size: 1.5rem;
+    }
+}
