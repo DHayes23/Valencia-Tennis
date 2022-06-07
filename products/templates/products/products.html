@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% load static %}
 
@@ -10,11 +11,13 @@
             <div class="col s12">
                 <div class="container">
                     <h2 id="products-heading" class="center-align">Our Products</h2>
-                    <div id="product-search" class="hoverable">
-                        <div class="shadow"></div>
-                        <input type="text" placeholder="Search our store...">
-                        <i id="product-search-icon" class="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                    <form method="GET" action="{% url 'products' %}">
+                        <div id="product-search" class="hoverable">
+                            <div class="shadow"></div>
+                            <input type="text" name="q" placeholder="Search our store...">
+                            <button type="submit"><i id="product-search-icon" class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -34,6 +37,13 @@
                   </div>
                 </div>
             {% endfor %}
+
+            {% if not products %}
+            <div class="search-fail-panel">
+                <h3 class="center-align search-fail-heading">Sorry, no results!</h3>
+                <p class="search-fail-text">We weren't able to find a product to match your search! Please try again.</p>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>
