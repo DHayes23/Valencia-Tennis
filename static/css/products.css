@@ -35,10 +35,6 @@
     filter: blur(1px);
 }
 
-#product-search:hover {
-    width: 70%;
-}
-
 #product-search::after {
     content: '';
     position: absolute;
@@ -73,10 +69,37 @@
 #product-search-icon {
     position: absolute;
     right: 20px;
+    bottom: 15px;
     color: #555;
     font-size: 1.5rem;
     cursor: pointer;
 
+}
+
+.search-fail-panel {
+    height: fit-content;
+    margin-left: 25%;
+    width: 50%;
+    margin-top: 125px;
+    margin-bottom: 125px;
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    background: rgb(252, 252, 252);
+    border-radius: 50px;
+    box-shadow: 15px 15px 25px rgb(160, 160, 160),
+    -5px -5px 15px rgb(160, 160, 160),
+    inset -5px -5px 10px rgb(189, 189, 189);
+}
+
+.search-fail-heading {
+    font-size: 3rem;
+    color: orangered;
+}
+.search-fail-text {
+    font-size: 1.6rem;
+    color: black;
+    line-height: 2rem;
 }
 
 .product-card {
@@ -163,6 +186,18 @@
 
     #product-search:hover {
         width: 100%;
+    }
+
+    .search-fail-panel {
+        height: fit-content;
+        margin-left: 2.5%;
+        width: 95%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-top: 10px;
+        font-size: 1rem;
+        line-height: 1rem;
     }
 
     .product-detail-heading {
