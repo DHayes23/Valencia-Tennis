@@ -6,6 +6,9 @@
     padding-bottom: 40px;
     margin-bottom: 50px;
 }
+#products-heading a{
+    color: black;
+}
 
 
 /* Search box adapted from: https://www.youtube.com/watch?v=LIt719I-p-o&t=337s&ab_channel=OnlineTutorials*/
