@@ -17,8 +17,16 @@
                             <button type="submit"><i id="product-search-icon" class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                         <div id="filter-button-container" class="row center-align">
-                           <a href="{% url 'products'%}?category=clothing" class="col s6 offset-s3 m3 offset-m3 filter-button">Clothing</a>
-                           <a href="{% url 'products'%}?category=equipment" class="col s6 offset-s3 m3 filter-button">Equipment</a>
+                           <a href="" class="col s6 offset-s3 m3 offset-m3 filter-button">Clothing</a>
+                           <a href="" class="col s6 offset-s3 m3 filter-button">Equipment</a>
+                        </div>
+                        <div id="sort-button-container" class="row center-align">
+                            <a class='dropdown-trigger sort-button center-align' href='#' data-target='dropdown1'>Sort by:</a>
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li class="sort-option"><a href="#!">Price(Low - High)</a></li>
+                                <li class="sort-option"><a href="#!">Price(High - Low)</a></li>
+                                <li class="divider" tabindex="-1"></li>
+                              </ul>
                         </div>
                     </form>
                 </div>
