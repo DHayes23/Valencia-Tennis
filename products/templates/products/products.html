@@ -17,8 +17,8 @@
                             <button type="submit"><i id="product-search-icon" class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                         <div id="filter-button-container" class="row center-align">
-                           <a href="" class="col s12 m3 offset-m3 filter-button">Clothing</a>
-                           <a href="" class="col s12 m3 filter-button">Equipment</a>
+                           <a href="{% url 'products'%}?category=clothing" class="col s12 m3 offset-m3 filter-button">Clothing</a>
+                           <a href="{% url 'products'%}?category=equipment" class="col s12 m3 filter-button">Equipment</a>
                         </div>
                     </form>
                 </div>
