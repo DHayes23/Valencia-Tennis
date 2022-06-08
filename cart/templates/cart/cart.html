@@ -33,6 +33,7 @@
                 <td><img src="{{item.product.image.url}}" class="cart-table-image"></td>
                 <td>
                   <p class="center-align">{{ item.product.name }}</p>
+                  <p class="center-align">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                 </td>
                 <td>
                   <p class="center-align">SKU: {{ item.product.sku|upper }}</p>
