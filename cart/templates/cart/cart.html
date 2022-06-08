@@ -10,47 +10,74 @@
       <h1 id="cart-heading">Your Cart</h1>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col s12">
-      {% if cart_items %}
-        <div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        {% if cart_items %}
+        <div id="cart-table">
           <table class="responsive-table">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+                <th class="cart-table-heading">Product Info</th>
+                <th class="center-align cart-table-heading">Name</th>
+                <th class="center-align cart-table-heading">SKU</th>
+                <th class="center-align cart-table-heading">Price</th>
+                <th class="center-align cart-table-heading">Quantity</th>
+                <th class="center-align cart-table-heading">Subtotal</th>
               </tr>
             </thead>
 
             <tbody>
+              {% for item in cart_items %}
               <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
+                <td><img src="{{item.product.image.url}}" class="cart-table-image"></td>
+                <td>
+                  <p class="center-align">{{ item.product.name }}</p>
+                </td>
+                <td>
+                  <p class="center-align">SKU: {{ item.product.sku|upper }}</p>
+                </td>
+                <td>
+                  <p class="center-align">€{{ item.product.price }}</p>
+                </td>
+                <td>
+                  <p class="center-align">{{ item.quantity }}</p>
+                </td>
+                <td>
+                  <p class="center-align">{{ item.product.price }}</p>
+                </td>
               </tr>
-              <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-              </tr>
-              <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
-              </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>
-      {% else %}
-        <div class="center-align">
-          <div class="empty-cart-panel">
-            <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
-            <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
-            <button id="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+        <div id="cart-button-section" class="center-align">
+          <div class="row">
+            <div class="col s12 m6 offset-m3 center-align">
+              <a href="{% url 'products' %}" class="cart-store-button">
+                Checkout
+              </a>
+            </div>
           </div>
+          <br>
+          <div class="row center-align">
+            <div class="col s12 m6 offset-m3 center-align">
+              <a href="{% url 'products' %}" id="cart-back-to-store-button" class="cart-store-button">
+                Back to Store
+              </a>
+            </div>
+          </div>
+
         </div>
+      </div>
+      {% else %}
+      <div class="center-align">
+        <div class="empty-cart-panel">
+          <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
+          <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
+          <button class="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+        </div>
+      </div>
       {% endif %}
     </div>
   </div>
