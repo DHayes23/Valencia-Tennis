@@ -30,8 +30,21 @@
                         <div class="col s12 m6">
                             <p class="">Quantity:</p>
                             <div>
-                                <div id="product-detail-quantity">
-                                    <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <div class="input-group">
+                                    <input class="qty_input" type="number"
+                                        name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}" required>
+                                    <div class="input-group-append">
+                                        <button class="decrement-qty btn transparent product-quantity-icon" 
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                        <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button class="increment-qty btn transparent right product-quantity-icon"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +53,7 @@
                         <div class="col s12 m6">
                             <p>Size:</p>
                             <div>
-                                <select name="product_size" id="id_product_size">
+                                <select name="product_size" id="id_product_size" required>
                                     <option value="" disabled selected>Choose a size</option>
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
@@ -66,3 +79,8 @@
     </div>
 </section>
 {% endblock%}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
