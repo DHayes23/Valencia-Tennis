@@ -77,23 +77,28 @@
             </tbody>
           </table>
         </div>
-        <div id="cart-button-section" class="center-align">
-          <div class="row">
-            <div class="col s12 m6 offset-m3 center-align">
-              <a href="{% url 'products' %}" class="cart-store-button">
-                Checkout
-              </a>
-            </div>
+        <div class="row">
+          <div id="cart-order-summary" class="col s12 m6 offset-m6 right">
+            <h2 id="cart-order-summary-heading">
+              Order Summary:
+            </h2>
+            <hr>
+            <p class="cart-order-summary-text">
+              Items: €{{ total|floatformat:2 }}
+            <p>
+            <p class="cart-order-summary-text">
+              Delivery: €{{ delivery|floatformat:2 }}
+            </p>
+            <h4 id="cart-order-summary-total">
+              Total: €{{ grand_total|floatformat:2 }}
+            </h4>
+            <a href="{% url 'products' %}" id="cart-back-to-store-button" class=" row cart-store-button left">
+              Back to Store
+            </a>
+            <a href="{% url 'products' %}" class=" row cart-store-button right">
+              Checkout
+            </a>
           </div>
-          <br>
-          <div class="row center-align">
-            <div class="col s12 m6 offset-m3 center-align">
-              <a href="{% url 'products' %}" id="cart-back-to-store-button" class="cart-store-button">
-                Back to Store
-              </a>
-            </div>
-          </div>
-
         </div>
       </div>
       {% else %}

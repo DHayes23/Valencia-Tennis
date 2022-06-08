@@ -35,11 +35,11 @@
 
 .cart-store-button {
   border: none;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   color: orangered;
   padding: 0.7em 1.7em;
-  font-size: 2rem;
+  font-size: 1.2rem;
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
@@ -48,31 +48,50 @@
     -6px -7px 12px #ffffff;
   font-weight: bold;
  }
-
- .cart-store-button:hover {
-   color: orangered;
-   font-size: 2.3rem;
- }
  
  .cart-store-button:active {
   color: orangered;
   box-shadow: inset 4px 4px 12px #c5c5c5,
     inset -4px -4px 12px #ffffff;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
  }
 
  .cart-store-button a {
    color: orangered;
  }
-
+ 
  #cart-table {
-   margin-bottom: 100px;
+   margin-bottom: 50px;
    font-size: 1rem;
  }
 
  .cart-table-image {
    width: 100%;
    height: 350px;
+ }
+
+ #cart-order-summary {
+  margin-bottom: 50px;
+ }
+
+ #cart-order-summary-heading {
+   margin-top: 0px;
+   color: orangered;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+ }
+
+ .cart-order-summary-text {
+   font-size: 1.3rem;
+   font-weight: bold;
+   margin-top: 50px;
+   margin-bottom: 50px;
+ }
+
+ #cart-order-summary-total {
+   color: orangered;
+   color: orangered;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+   border-bottom: solid black 1px;
  }
 
  #cart-button-section .cart-store-button {
@@ -179,15 +198,11 @@
   }
 
   .cart-store-button {
-  font-size: 1.5rem;
-  }
-
-  .cart-store-button:hover {
-  font-size: 2rem;
+  font-size: 1rem;
   }
 
   .cart-store-button:active {
-  font-size: 1.5rem;
+  font-size: 1rem;
   }
 
   #cart-button-section .cart-store-button {
