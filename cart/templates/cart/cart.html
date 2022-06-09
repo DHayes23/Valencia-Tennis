@@ -71,7 +71,7 @@
                   <a class="remove-item cart-action-button" id="remove_{{item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                 </td>
                 <td>
-                  <p class="center-align">{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                  <p class="center-align">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </td>
               </tr>
               {% endfor %}
