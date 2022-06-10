@@ -1,4 +1,4 @@
-
+/* Stripe Elements */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -36,4 +36,17 @@
     color: #000;
     border: 1px solid #000;
     border-radius: 0.5em;
+}
+
+/* Checkout Success - Order Summary */
+
+#order-summary {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.order-summary-heading {
+  color: orangered;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    border-bottom: 2px solid black;
 }
