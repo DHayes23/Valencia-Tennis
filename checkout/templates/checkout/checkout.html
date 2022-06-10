@@ -4,14 +4,12 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 
 <div class="row">
   <div class="container">
     <div class="col s12 center-align">
       <h1 id="cart-heading">Checkout</h1>
-    </div>
-    <div>
-      <p class="center-align">Please fill out the form below to complete your purchase.</p>
     </div>
     <div class="row">
       <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -75,7 +73,7 @@
             Total: €{{ grand_total|floatformat:2 }}
           </h4>
           <div>                    
-            <a href="{% url 'view_cart' %}" class="cart-store-button transparent">
+            <a href="{% url 'view_cart' %}" class="cart-store-button transparent black-text">
               <span>
                 <i class="fas fa-chevron-left"></i>
               </span>
@@ -87,12 +85,6 @@
                 <i class="fas fa-lock"></i>
               </span>
             </button>
-            <p>
-              <span>
-                <i class="fas fa-exclamation-circle"></i>
-              </span>
-              <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-            </p>
           </div>
         </div>
       </form>
@@ -101,3 +93,10 @@
 </div>
 
 {% endblock%}
+
+{% block postloadjs %}
+  {{ block.super }}
+  {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+  {{ client_secret|json_script:"id_client_secret" }}
+  <script src="{% static 'js/stripe_elements.js' %}"></script>
+{% endblock %}
