@@ -9,9 +9,9 @@
     <div class="container">
         <div id="order-summary" class="col s12">
             <div class="col s12 center-align">
-                <h1 id="cart-heading">Order Successful!</h1>
-                <h4>Your order is complete. You can review your order details below, and a confirmation email will be sent to
-                    <strong>{{ order.email }}</strong></h4>
+                <h4 id="cart-heading">Order Successful!</h1>
+                <p>Your order is complete. You can review your order details below, and a confirmation email will be sent to
+                    <strong>{{ order.email }}</strong></p>
             </div>
             <div class="row">
                 <div class="col">
@@ -161,18 +161,16 @@
                     <p>{{ order.grand_total }}</p>
                 </div>
             </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col s12">
-                    <a href="{% url 'products' %}" class="cart-store-button transparent">
-                        <span>
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span>Continue Shopping</span>
-                    </a>
-                </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col s12">
+                <a href="{% url 'products' %}" class="cart-store-button transparent left">
+                    <span>
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Continue Shopping</span>
+                </a>
             </div>
         </div>
     </div>
