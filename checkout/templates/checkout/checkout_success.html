@@ -44,7 +44,7 @@
 
         {% for item in order.lineitems.all %}
         <div class="col s12 m4">
-            <p>{{ item.product.name }}{% if item.product.size %}{{ item.product.size|upper }}{% endif %}:</p>
+            <p>{{ item.product.name }}{% if item.product_size %}{{ item.product_size|upper }}{% endif %}:</p>
         </div>
         <div class="col s12 m8 right">
             <p>{{ item.quantity }} @ {{item.product.price }} each</p>
