@@ -15,21 +15,21 @@
         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
           <div class="col s12 m6">
                   {% csrf_token %}
-                  <fieldset>
+                  <fieldset class="orange-text text-darken-4">
                       <legend>Personal Details</legend>
                       {{ order_form.full_name | as_crispy_field }}
                       {{ order_form.email | as_crispy_field }}
                   </fieldset>
                   <br>
-                  <fieldset>
+                  <fieldset class="orange-text text-darken-4">
                       <legend>Delivery</legend>
                       {{ order_form.phone_number | as_crispy_field }}
-                      {{ order_form.country | as_crispy_field }}
-                      {{ order_form.postcode | as_crispy_field }}
-                      {{ order_form.town_or_city | as_crispy_field }}
                       {{ order_form.street_address1 | as_crispy_field }}
                       {{ order_form.street_address2 | as_crispy_field }}
+                      {{ order_form.town_or_city | as_crispy_field }}
                       {{ order_form.county | as_crispy_field }}
+                      {{ order_form.postcode | as_crispy_field }}
+                      {{ order_form.country | as_crispy_field }}
                       <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
                           <label for="id-save-info"></label>
@@ -43,7 +43,8 @@
                         {% endif %}
                       </div>
                   </fieldset>
-                  <fieldset>
+                  <br>
+                  <fieldset class="orange-text text-darken-4">
                     <legend>Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div id="card-element"></div>
@@ -53,6 +54,7 @@
                     <!-- Pass the client secret to the view so we can get the payment intent id -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
+                <br>
           </div>
           <div class="col s12 m6">
             
@@ -63,7 +65,7 @@
             </h2>
             <hr>
             {% for item in cart_items %}
-              <h5>{{ item.quantity }} x {{ item.product.name }} {% if item.product.has_sizes %}Size: {{ item.size|upper }}{% else %}{% endif %} <br> <span class="orange-text">€{{ item.product.price | calc_subtotal:item.quantity }}<hr></span></h5>
+              <h5>{{ item.quantity }} x {{ item.product.name }} {% if item.product.has_sizes %}Size: {{ item.size|upper }}{% else %}{% endif %} <br> <span class="orange-text text-darken-4">€{{ item.product.price | calc_subtotal:item.quantity }}<hr></span></h5>
             {% endfor %}
             <p class="cart-order-summary-text">
               Items: €{{ total|floatformat:2 }}
@@ -74,6 +76,7 @@
             <h4 id="cart-order-summary-total">
               Total: €{{ grand_total|floatformat:2 }}
             </h4>
+            <br>
             <div>                    
               <a href="{% url 'view_cart' %}" class="cart-store-button transparent black-text">
                 <span>

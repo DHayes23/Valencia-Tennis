@@ -38,6 +38,17 @@
     border-radius: 0.5em;
 }
 
+select,
+select option {
+  color: red;
+}
+
+select:invalid,
+select option[value=""] {
+  background-color: red;
+  color: red !important;
+}
+
 /* Checkout Success - Order Summary */
 
 #order-summary {
