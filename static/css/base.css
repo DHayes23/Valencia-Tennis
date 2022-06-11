@@ -406,6 +406,7 @@ margin-top: 25px;
 
 #contact-section {
   height: 1000px;
+  padding: 20px;
   background-image: url(/media/contact-section.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -423,8 +424,13 @@ margin-top: 25px;
 .gmap_canvas {
   overflow:hidden;
   background:none!important;
-  height:500px;
-  width:500px;
+  height:450px;
+  width:450px;
+  margin-left: 50px;
+}
+
+#contact-details {
+  margin-left: 50px;
 }
 
 #contact-heading {
@@ -609,6 +615,10 @@ margin-top: 25px;
 
   #contact-section {
     height: 680px;
+  }
+
+  #contact-details {
+    margin-left: 10px;
   }
 
   #contact-heading {
