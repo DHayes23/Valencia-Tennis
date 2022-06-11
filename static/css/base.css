@@ -101,7 +101,7 @@ body {
   height: 500px;
   background-image: url(/static/images/hero-image-3.webp);
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: cover;
 }
 
 /* INFO SECTION */
