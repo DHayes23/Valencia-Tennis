@@ -6,88 +6,104 @@
 <link rel="stylesheet" href="{% static 'css/cart.css' %}">
 <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 
-<div class="row">
-  <div class="container">
-    <div class="col s12 center-align">
-      <h1 id="cart-heading">Checkout</h1>
-    </div>
-    <div class="row">
-      <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-        <div class="col s12 m6">
-                {% csrf_token %}
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Delivery</legend>
-                    {{ order_form.phone_number | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    {{ order_form.street_address2 | as_crispy_field }}
-                    {{ order_form.county | as_crispy_field }}
-                    <div class="form-check form-check-inline float-right mr-0">
-                      {% if user.is_authenticated %}
-                        <label for="id-save-info"></label>
-                        <input type="checkbox" id="id-save-info" name="save-info" checked>
-                        <span>Save this delivery information to my profile</span>
-                      {% else %}
-                          <label for="id-save-info">
-                              <a href="{% url 'account_signup' %}">Create an account</a> or 
-                              <a href="{% url 'account_login' %}">login</a> to save this information
-                          </label>
-                      {% endif %}
-                    </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Payment</legend>
-                  <!-- A Stripe card element will go here -->
-                  <div id="card-element"></div>
+<!-- Loading Overlay -->
+<div>
+  <div class="row">
+    <div class="container">
+      <div class="col s12 center-align">
+        <h1 id="cart-heading">Checkout</h1>
+      </div>
+      <div class="row">
+        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+          <div class="col s12 m6">
+                  {% csrf_token %}
+                  <fieldset>
+                      <legend>Personal Details</legend>
+                      {{ order_form.full_name | as_crispy_field }}
+                      {{ order_form.email | as_crispy_field }}
+                  </fieldset>
+                  <br>
+                  <fieldset>
+                      <legend>Delivery</legend>
+                      {{ order_form.phone_number | as_crispy_field }}
+                      {{ order_form.country | as_crispy_field }}
+                      {{ order_form.postcode | as_crispy_field }}
+                      {{ order_form.town_or_city | as_crispy_field }}
+                      {{ order_form.street_address1 | as_crispy_field }}
+                      {{ order_form.street_address2 | as_crispy_field }}
+                      {{ order_form.county | as_crispy_field }}
+                      <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                          <label for="id-save-info"></label>
+                          <input type="checkbox" id="id-save-info" name="save-info" checked>
+                          <span>Save this delivery information to my profile</span>
+                        {% else %}
+                            <label for="id-save-info">
+                                <a href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                      </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    <div id="card-element"></div>
 
-                  <!-- Used to display form errors -->
-                  <div class="red-text" id="card-errors" role="alert"></div>
-              </fieldset>
-        </div>
-        <div class="col s12 m6">
-          
-        </div>
-        <div id="cart-order-summary" class="col s12 m6">
-          <h2 id="cart-order-summary-heading">
-            Order Summary:
-          </h2>
-          <hr>
-          {% for item in cart_items %}
-            <h5>{{ item.quantity }} x {{ item.product.name }} {% if item.product.has_sizes %}Size: {{ item.size|upper }}{% else %}{% endif %} <br> <span class="orange-text">€{{ item.product.price | calc_subtotal:item.quantity }}<hr></span></h5>
-          {% endfor %}
-          <p class="cart-order-summary-text">
-            Items: €{{ total|floatformat:2 }}
-          <p>
-          <p class="cart-order-summary-text">
-            Delivery: €{{ delivery|floatformat:2 }}
-          </p>
-          <h4 id="cart-order-summary-total">
-            Total: €{{ grand_total|floatformat:2 }}
-          </h4>
-          <div>                    
-            <a href="{% url 'view_cart' %}" class="cart-store-button transparent black-text">
-              <span>
-                <i class="fas fa-chevron-left"></i>
-              </span>
-              <span>Return to Cart</span>
-            </a>
-            <button id="submit-button" class="cart-store-button transparent">
-              <span class="font-weight-bold">Pay €{{grand_total | floatformat:2 }} now</span>
-              <span class="icon">
-                <i class="fas fa-lock"></i>
-              </span>
-            </button>
+                    <!-- Used to display form errors -->
+                    <div class="red-text" id="card-errors" role="alert"></div>
+                </fieldset>
           </div>
-        </div>
-      </form>
+          <div class="col s12 m6">
+            
+          </div>
+          <div id="cart-order-summary" class="col s12 m6">
+            <h2 id="cart-order-summary-heading">
+              Order Summary:
+            </h2>
+            <hr>
+            {% for item in cart_items %}
+              <h5>{{ item.quantity }} x {{ item.product.name }} {% if item.product.has_sizes %}Size: {{ item.size|upper }}{% else %}{% endif %} <br> <span class="orange-text">€{{ item.product.price | calc_subtotal:item.quantity }}<hr></span></h5>
+            {% endfor %}
+            <p class="cart-order-summary-text">
+              Items: €{{ total|floatformat:2 }}
+            <p>
+            <p class="cart-order-summary-text">
+              Delivery: €{{ delivery|floatformat:2 }}
+            </p>
+            <h4 id="cart-order-summary-total">
+              Total: €{{ grand_total|floatformat:2 }}
+            </h4>
+            <div>                    
+              <a href="{% url 'view_cart' %}" class="cart-store-button transparent black-text">
+                <span>
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Return to Cart</span>
+              </a>
+              <button id="submit-button" class="cart-store-button transparent">
+                <span class="font-weight-bold">Pay €{{grand_total | floatformat:2 }} now</span>
+                <span class="icon">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="loading-overlay">
+  <div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only loading-spinner">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
     </div>
   </div>
 </div>
