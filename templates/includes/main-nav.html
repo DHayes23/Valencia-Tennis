@@ -7,7 +7,7 @@
         <li><a class="white-text nav-item" href="#membership-scroll-helper">Membership</a></li>
         <li><a class="white-text nav-item" href="{% url 'products' %}">Store</a></li>
         {% if request.user.is_authenticated %}
-          <li><a class="white-text nav-item" href="{% url 'account_login' %}">My Profile</a></li>
+          <li><a class="white-text nav-item" href="{% url 'profile' %}">My Profile</a></li>
           <li><a id="signOutLink" class="white-text nav-item">Log Out</a></li>
 
           <!-- The following form element allows for one-click logout, thereby bypassing the need to verify with the user whether or not they want to logout. -->
