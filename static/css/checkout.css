@@ -38,15 +38,8 @@
     border-radius: 0.5em;
 }
 
-select,
-select option {
-  color: red;
-}
-
-select:invalid,
-select option[value=""] {
-  background-color: red;
-  color: red !important;
+.select-wrapper input.select-dropdown {
+  color: #aab7c4 !important;
 }
 
 /* Checkout Success - Order Summary */
