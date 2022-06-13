@@ -5,7 +5,7 @@
     <li><a href="{% url 'products' %}" class="sidenav-close"><i class="fa-solid fa-store"></i>Store</a></li>
     {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
-          <li><a class="" href="{% url 'add_product' %}"><i class="fa-solid fa-box-open"></i>Manage Store</a></li>
+          <li><a class="" href="{% url 'add_product' %}"><i class="fa-solid fa-dolly"></i>Manage Store</a></li>
         {% endif %}
     {% endif %}
     <li><a href="{% url 'view_cart' %}" class="sidenav-close"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
