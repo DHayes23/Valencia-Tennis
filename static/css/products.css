@@ -374,3 +374,29 @@ ul.dropdown-content li a{
     }
 
 }
+
+/* PRODUCT MANAGEMENT */
+
+#product-management-heading {
+    margin-top: 100px;
+}
+
+.product-management-sub-heading {
+    color: orangered;
+    border-bottom: solid 1px black;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#product-management-form-container {
+    border: #555 solid 3px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.product-management-form {
+    color: orangered;
+}
