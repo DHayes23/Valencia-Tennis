@@ -219,13 +219,17 @@ ul.dropdown-content li a{
     border-bottom-right-radius: 30px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
-    margin-bottom: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     cursor: pointer;
 }
 
 .product-detail-card-image {
     height: 600px;
+}
+
+.product-admin-button {
+    margin-top: 50px;
 }
 
 .product-detail-price {
@@ -325,11 +329,11 @@ ul.dropdown-content li a{
 @media (max-width: 992px) {
 
     .product-detail-heading {
-        margin-top: 300px;
+        margin-top: 50px;
     }
 
     .product-detail-card {
-        margin-top: 300px;
+        margin-top: 100px;
     }
 
 }
@@ -365,7 +369,7 @@ ul.dropdown-content li a{
     .product-detail-card {
         height: 700px;
         max-width: 100%;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 0px;
     }
 
