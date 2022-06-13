@@ -3,6 +3,11 @@
     <li><a href="{% url 'home' %}" class="sidenav-close"><i class="fa-solid fa-house sidenav-icon"></i>Home</a></li>
     <li><a href="#membership-scroll-helper" class="sidenav-close"><i class="fa-solid fa-address-card sidenav-icon"></i>Membership</a></li>
     <li><a href="{% url 'products' %}" class="sidenav-close"><i class="fa-solid fa-store"></i>Store</a></li>
+    {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser %}
+          <li><a class="" href="{% url 'add_product' %}"><i class="fa-solid fa-box-open"></i>Manage Store</a></li>
+        {% endif %}
+    {% endif %}
     <li><a href="{% url 'view_cart' %}" class="sidenav-close"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
     <li><a href="#contact-section" class="sidenav-close"><i class="fa-solid fa-message"></i>Contact</a></li>
     {% if request.user.is_authenticated %}

@@ -21,8 +21,12 @@
           <li><a class="white-text nav-item" href="{% url 'account_signup' %}">Sign Up</a></li>
           <li><a class="white-text nav-item" href="{% url 'account_login' %}">Log In</a></li>
         {% endif %}
+        {% if request.user.is_authenticated %}
+          {% if request.user.is_superuser %}
+            <li><a class="white-text nav-item" href="{% url 'add_product' %}"><i class="fa-solid fa-box-open"></i></a></li>
+          {% endif %}
+        {% endif %}
         <li><a class="white-text nav-item" href="{% url 'view_cart' %}"><i class="fa-solid fa-cart-shopping {% if grand_total %}orange-text text-darken-4{% endif %}"></i></a></li>
-
         
       </ul>
     </div>

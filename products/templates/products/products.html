@@ -38,7 +38,11 @@
                   <div class="card product-card hoverable">
                     <a href="{% url 'product_detail' product.id %}">
                         <div class="card-image">
+                            {% if product.image %}
                             <img class="product-card-image" src="{{ product.image.url }}">
+                            {% else %}
+                            <img class="product-card-image" src="{{ MEDIA_URL }}noimage.png">
+                            {% endif %}
                             <div class="card-content">
                                 <p class="product-card-price">€{{product.price}}</p>
                                 <p class="product-card-name">{{product.name}}</p>

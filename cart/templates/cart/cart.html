@@ -31,7 +31,13 @@
             <tbody>
               {% for item in cart_items %}
               <tr>
-                <td><img src="{{item.product.image.url}}" class="cart-table-image"></td>
+                <td>
+                  {% if item.product.image %}
+                      <img class="cart-table-image" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                  {% else %}
+                      <img class="cart-table-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                  {% endif %}
+                </td>
                 <td>
                   <p class="center-align">{{ item.product.name }}</p>
                   <p class="center-align">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
