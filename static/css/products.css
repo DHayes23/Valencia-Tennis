@@ -256,10 +256,9 @@ ul.dropdown-content li a{
         -6px -7px 12px #ffffff;
     font-weight: bold;
     font-family: 'Montserrat';
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
     margin-left: 25px;
     width: max-content;
-
 }
 
 .product-detail-button:hover {
@@ -381,8 +380,10 @@ ul.dropdown-content li a{
 
 /* PRODUCT MANAGEMENT */
 
-#product-management-heading {
+.product-management-heading {
     margin-top: 100px;
+    font-size: 2.5rem;
+    color: orangered !important;
 }
 
 .product-management-sub-heading {
@@ -397,7 +398,7 @@ ul.dropdown-content li a{
 
 #product-management-form-container {
     border: #555 solid 3px;
-    padding: 50px;
+    padding: 40px;
     margin-top: 50px;
 }
 

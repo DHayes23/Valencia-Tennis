@@ -72,11 +72,15 @@ body {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  width: max-content;
+  width: fit-content;
   max-width: 100%;
   color: white;
   border: 3px solid black;
   overflow: hidden;
+}
+
+.message {
+  font-size: 1.3rem;
 }
 
 /* SIDENAV */
