@@ -64,6 +64,20 @@ body {
   border-top: 1px rgb(255, 255, 255) solid;
 }
 
+/* Messages */
+
+#message-container {
+  margin-top: 100px;
+  background-color: rgb(27, 32, 40);  
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: max-content;
+  max-width: 100%;
+  color: white;
+  border: 3px solid black;
+}
+
 /* SIDENAV */
 
 #burger-menu {

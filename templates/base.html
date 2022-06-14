@@ -32,7 +32,11 @@
       </header>
 
       {% if messages %}
-        <div class="message-container"></div>
+          <div id="message-container" class="center-align">
+            {% for message in messages %}
+              <h5 class="center-align">&nbsp &nbsp  {{ message }} &nbsp &nbsp</h5>
+            {% endfor %}
+          </div>
       {% endif %}
 
       {% block content%}
