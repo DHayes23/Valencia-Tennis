@@ -1,6 +1,61 @@
+/* My Info */
+
+#profile-heading {
+    color: orangered;
+    margin-top: 100px;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    font-size: 3.5rem;
+}
+
+#my-info-heading {
+    margin-top: 100px;
+}
+
+.my-info-sub-heading {
+    color: orangered;
+    border-bottom: solid 1px black;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+
+}
+
+#my-info-form-container {
+    border: #555 solid 3px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.my-info-form {
+    color: orangered;
+}
+
 .select-dropdown {
     color: #aab7c4;
 }
+
+.profile-update-button {
+    border: none;
+    color: orangered;
+    font-size: 1.1rem;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #a3a3a3,
+        -6px -7px 12px #ffffff;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    padding: 0.5em 2em;
+    margin-top: 50px;
+    width: max-content;
+}
+
+/* Order History */
 
 .order-history {
     max-height: 416px;
