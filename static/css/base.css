@@ -76,6 +76,7 @@ body {
   max-width: 100%;
   color: white;
   border: 3px solid black;
+  overflow: hidden;
 }
 
 /* SIDENAV */
