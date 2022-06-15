@@ -1,7 +1,7 @@
 <ul id="mobile-sidenav" class="sidenav sidenav-items">
     <li><a class="sidenav-close" href="#!"><i class="fa-solid fa-x red-text"></i>Close</a></li>
     <li><a href="{% url 'home' %}" class="sidenav-close"><i class="fa-solid fa-house sidenav-icon"></i>Home</a></li>
-    <li><a href="#membership-scroll-helper" class="sidenav-close"><i class="fa-solid fa-address-card sidenav-icon"></i>Membership</a></li>
+    <li><a href="{% url 'application' %}" class="sidenav-close"><i class="fa-solid fa-address-card sidenav-icon"></i>Membership</a></li>
     <li><a href="{% url 'products' %}" class="sidenav-close"><i class="fa-solid fa-store"></i>Store</a></li>
     {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
