@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
+
 
 # Create your models here.
 class MembershipType(models.Model):
@@ -14,7 +16,8 @@ class MembershipType(models.Model):
 
 
 class Membership(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE,)
+    date = models.DateTimeField(auto_now_add=True)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     birth_date = models.DateField(null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -23,8 +26,8 @@ class Membership(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     county = models.CharField(max_length=80, null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
-    membership_type = models.ForeignKey('MembershipType', null=True, blank=False, on_delete=models.SET_NULL)
-    application_granted = models.BooleanField(default=False, null=True, blank=True)
+    membership_type = models.ForeignKey('MembershipType', null=True, blank=True, default=3, on_delete=models.SET_NULL)
+    application_granted = models.BooleanField(default=False, null=False, blank=True)
 
 
     def __str__(self):

@@ -3,7 +3,8 @@ from .models import Membership, MembershipType
 
 class MembershipAdmin(admin.ModelAdmin):
     list_display = (
-        'user', 
+        'user',
+        'date',
         'full_name',
         'birth_date',
         'phone_number',
@@ -11,7 +12,7 @@ class MembershipAdmin(admin.ModelAdmin):
         'application_granted',
     )
 
-    ordering = ('user',)
+    ordering = ('date',)
 
 class MembershipTypeAdmin(admin.ModelAdmin):
     list_display = (
