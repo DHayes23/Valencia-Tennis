@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404,HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
@@ -23,9 +23,10 @@ def application(request):
 
             else:
                 messages.error(request, 'Failed to submit membership application. Please check the form for missing fields.')
-        except:
-                messages.success(request, 'You have already submitted a membership application.')
-                return redirect(reverse('profile'))
+        except Exception as e:
+            messages.error(request, 'You have already submitted a membership application!')
+            print(e)
+            return redirect(reverse('profile'))
     else:
         form = MembershipForm()
         
