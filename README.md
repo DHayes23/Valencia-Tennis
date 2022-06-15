@@ -162,17 +162,24 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
  ---
  ## **Site Structure - User Flow Chart**
 ---
-* This sub-section contains an image of the User Flow Chart; a diagram of the expected way in which a user will interact with the site.
+* This section contains an image of the User Flow Chart; a diagram of the expected way in which a user will interact with the site.
+---
+ ![](README_Assets/UserFlowMap.png)
 ---
  ## **Site Structure - Wireframes**
  * This section contains images of some of the wireframes created in the pre-production stages of this project.
  ---
 ### **Site Structure - Desktop Wireframes**
 ---
-
+ ![](README_Assets/Wireframes_Desktop/IndexDesktop.png)
+ ![](README_Assets/Wireframes_Desktop/Login.png)
+ ![](README_Assets/Wireframes_Desktop/SignUp.png)
+ ![](README_Assets/Wireframes_Desktop/Profile.png)
 ---
 ### **Site Structure - Mobile Wireframes**
 ---
+ ![](README_Assets/Wireframes_Mobile/IndexMobile.png)
+ ![](README_Assets/Wireframes_Mobile/ProfileMobile.png)
 
 ---
  ## **Site Structure - Template Directory**
