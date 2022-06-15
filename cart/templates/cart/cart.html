@@ -5,7 +5,7 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/cart.css' %}">
 
-<div class="row">
+<div class="row primary-row">
   <div class="container">
     <div class="col s12 center-align">
       <h1 id="cart-heading">Your Cart</h1>
@@ -109,44 +109,41 @@
         </div>
       </div>
       {% else %}
-      <div class="center-align">
-        <div class="empty-cart-panel">
-          <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
-          <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
-          <button class="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+        <div class="center-align">
+          <div class="empty-cart-panel">
+            <h3 class="center-align empty-cart-heading">The Cart's Empty!</h3>
+            <p class="empty-cart-text">It looks like you haven't added anything to your cart yet.</p>
+            <button class="cart-store-button"><a href="{% url 'products' %}">Shop Now</a></button>
+          </div>
         </div>
-      </div>
       {% endif %}
     </div>
   </div>
 </div>
+{% endblock content %}
+  {% block postloadjs %}
+  {{ block.super }}
+  {% include 'products/includes/quantity_input_script.html' %}
 
-{% endblock%}
+  <script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
-<script type="text/javascript">
-  // Update quantity on click
-  $('.update-link').click(function(e) {
-      var form = $(this).prev('.update-form');
-      form.submit();
-  })
-
-  // Remove item and reload on click
-  $('.remove-item').click(function(e) {
-      var csrfToken = "{{ csrf_token }}";
-      var itemId = $(this).attr('id').split('remove_')[1];
-      var size = $(this).data('product_size');
-      var url = `/cart/remove/${itemId}/`;
-      var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-
-      $.post(url, data)
-       .done(function() {
-           location.reload();
-       });
-  })
-</script>
-
-{% endblock %}
+        $.post(url, data)
+        .done(function() {
+            location.reload();
+        });
+    })
+  </script>
+  {% endblock %}
