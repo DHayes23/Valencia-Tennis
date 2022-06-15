@@ -368,6 +368,13 @@ ul.dropdown-content li a{
 
 }
 
+/* EXTRA LARGE SCREENS  */
+@media (min-width: 2000px) {
+    #product-detail-container {
+      margin-bottom: 300px;
+    }
+  }
+
 /* PRODUCT MANAGEMENT */
 
 .product-management-heading {

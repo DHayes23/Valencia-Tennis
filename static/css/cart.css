@@ -219,3 +219,10 @@
     font-size: 1rem;
   }
 }
+
+/* EXTRA LARGE SCREENS  */
+@media (min-width: 2000px) {
+  .empty-cart-panel {
+    margin-bottom: 400px;
+  }
+}
