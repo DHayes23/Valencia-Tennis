@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col s12 m6 offset-m3" id="product-management-form-container">
             <h5 class="center-align product-management-sub-heading">Add Product</h5>
-            <form action="{% url 'add_product' %}" method="POST" class="product-management-form">
+            <form action="{% url 'add_product' %}" method="POST" class="product-management-form" enctype="multipart/form-data">
                 <div>
                     {% csrf_token %}
                     {{ form }}
