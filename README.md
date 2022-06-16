@@ -282,6 +282,12 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
 * The Checkout Success template notifies the user of a successfully placed order.
 * The user is further informed that an email containing an order confirmation has been sent to their listed email address.
 ---
+### **Template: Membership App - membership_application.html**
+---
+* The membership application form allows a user to make an application for membership.
+* The form is then handled manually by site admins who will make contact with the applicant regarding the status of their application and with respect to how a payment can be arranged for their membership.
+* If a user tries to submit an application more than once, they will be informed that they already have an existing application.
+---
   # **Surface** 
  ## **Design Notes**
  The following section details some of the design decisions applied to this website.
