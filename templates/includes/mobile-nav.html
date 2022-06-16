@@ -9,7 +9,6 @@
         {% endif %}
     {% endif %}
     <li><a href="{% url 'view_cart' %}" class="sidenav-close"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-    <li><a href="#contact-section" class="sidenav-close"><i class="fa-solid fa-message"></i>Contact</a></li>
     {% if request.user.is_authenticated %}
     <li><a class="sidenav-close" href="{% url 'profile' %}"><i class="fa-solid fa-user sidenav-icon"></i>My Profile</a></li>
     <li><a id="signOutLink" class="sidenav-close">Log Out<i class="fa-solid fa-right-from-bracket sidenav-icon"></i></a></li>
