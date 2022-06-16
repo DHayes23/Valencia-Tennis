@@ -434,7 +434,141 @@ ALLOWED_HOSTS = ['your_Heroku_app_name_here.herokuapp.com', 'localhost']
 >Step 21: Generate a new SECRET_KEY using a key generator, and replace your existing SECRET_KEY in settings.py with it. Add the secret key to the environment variables within Gitpod and the config vars in Heroku and add the following code to settings.py:
 ```
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
-``` 
+```
+---
+ ## **Testing**
+ This section contains the manual test procedures for the site's features, organised by the app that they belong to.
+---
+### **Base - Navbar**
+Expected Functionality:
+```
+1. The navbar should display a series of navigation options which dynamically change depending on whether a user is logged in and whether or not they have superuser priviliges.
+
+2. The contents of the navbar should be replaced with a burger-menu icon on small screens.
+
+3. The navbar should follow the user down the page as they scroll.
+
+4. The navigation links within the navbar should redirect the user to the appropriate page on click.
+```
+
+Testing Procedure:
+```
+1. Observe the navigation options available within the Navbar when not logged in, when logged in as a normal user and when logged in as a superuser. If the options are different for each type of user then this feature is functional.
+
+2. Using devtools, reduce the size of the screen. At the small-screen breakpoint (as per the Materialize framework), the contents of the Navbar should be replaced with a burger menu. If the burger menu appears and the other navigation links disappear, then this feature is functional.
+
+3. Scroll down a page and observe the Navbar. If the Navbar is visible at all times, even when scrolling to the end of a page, then this feature is functional.
+
+4. Click on one of the navigation links present within the Navbar. If the link redirects to the appropriate page, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Base - SideNav**
+Expected Functionality:
+```
+1. The SideNav should be displayed when the burger menu (visible only on small screens) is clicked.
+
+2. The SideNav should display the same series of links that would be available on the standard Navbar.
+```
+
+Testing Procedure:
+```
+1. On a small screen, click on the burger-menu icon. If clicking the icon opens the SideNav, then this feature is functional.
+
+2. Observe the links available in the standard Navbar on a large screen. Using devtools, reduce the size of the screen to the small screen breakpoint. If the links available within the SideNav match those present on the standard Navbar, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Base - Footer**
+Expected Functionality:
+```
+1. The Footer should be present at the bottom of every site page.
+
+2. The Footer should display the current year in its copyright message.
+```
+
+Testing Procedure:
+```
+1. Scroll to the end of each page within the site. If the Footer is present at the end of every page then this feature is functional.
+
+2. Observe the year present within the Footer's copyright message. If the year matches the current year, this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Home - Index - Membership Buttons**
+Expected Functionality:
+```
+1. The Membership Buttons should display an animation when hovered.
+
+2. When clicked, each button should redirect to the same Membership form page.
+```
+Testing Procedure:
+```
+1. Hover over each button in turn. If each button displays the same animation then this feature is functional.
+
+2. Click each button and note the url that they redirect to. If each button redirects to the same Membership form page then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Home - Index - Shop Now Button**
+Expected Functionality:
+```
+1. The Shop Now button should increase in size when hovered.
+
+2. When clicked, the button should redirect to the Store page.
+```
+Testing Procedure:
+```
+1. Hover over the button. If it increases in size on hover then this feature is functional.
+
+2. Click the button and note the page that it redirects to. If the button redirect to the All Products store page, then this feature is functional. 
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Home - Index - Google Map**
+Expected Functionality:
+```
+1. The map should display the 'pinned' location of the Valencia Tennis Club.
+
+2. The map should not be visible on small screens.
+```
+Testing Procedure:
+```
+1. Observe the map and its pinned location, if the location matches the location of the Tennis Club, this feature is functional.
+
+2. Using devtools, reduce the size of the screen. At the small-screen breakpoint (as per the Materialize framework), the map should disappear. If the map is not visible on small screens, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Home - Index - Location Link**
+Expected Functionality:
+```
+1. The contact section location link should open a new browser tab with the pinned location displayed on a Google map.
+```
+Testing Procedure:
+```
+1. Click the link. If the link opens a full size Google Map of the club's area, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Home - Index - MailTo Link**
+Expected Functionality:
+```
+1. The MailTo link should open the user's default mail client and pre-fill the 'To' field with the Club's email address.
+```
+Testing Procedure:
+```
+1. Click the link. If the link opens your default mail client with the 'To' field pre-filled with the Club's email address, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
 ---
  ## **Known Bugs and Issues**
  This section contains the details of any known bugs or issues affecting the site.
