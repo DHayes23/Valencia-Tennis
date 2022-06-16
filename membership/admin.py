@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Membership, MembershipType
 
+
 class MembershipAdmin(admin.ModelAdmin):
     list_display = (
         'user',
@@ -13,6 +14,7 @@ class MembershipAdmin(admin.ModelAdmin):
     )
 
     ordering = ('date',)
+
 
 class MembershipTypeAdmin(admin.ModelAdmin):
     list_display = (

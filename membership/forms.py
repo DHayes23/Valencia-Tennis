@@ -2,6 +2,7 @@ from django import forms
 from .models import Membership, MembershipType
 from django.forms.widgets import DateInput
 
+
 class MembershipForm(forms.ModelForm):
     class Meta:
         model = Membership

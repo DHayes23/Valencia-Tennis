@@ -29,6 +29,5 @@ class Membership(models.Model):
     membership_type = models.ForeignKey('MembershipType', null=True, blank=True, default=3, on_delete=models.SET_NULL)
     application_granted = models.BooleanField(default=False, null=False, blank=True)
 
-
     def __str__(self):
         return self.full_name
