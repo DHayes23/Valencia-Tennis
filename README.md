@@ -17,7 +17,7 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
  ---
  * This Readme is divided into different sections, with each section referring to one of the Five Planes of UX Design. 
  * Some of the topics within each of the 5 sections unavoidably cross over into other planes. 
- * Where a topic escapes the remit of the Five Planes, it will be included at the end of the document in the section called 'Appedix'.
+ * Where a topic escapes the remit of the Five Planes, it will be included at the end of the document in the section called 'Appendix'.
 ---
 # **Strategy** 
  ## **The Aims of the Project**
@@ -34,7 +34,7 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
 * As a first time user I want to be able to navigate the site easily.
 * As a first time user I want to be able to use the store and make purchases without difficulty.
 * As a first time user I want to be able to request membership at the club.
-* As a first time user I want to tbe able to create an account in a typical and convenient fashion.
+* As a first time user I want to be able to create an account in a typical and convenient fashion.
 * As a first time user I want to be able to get information on the location of the club and to be able to find its contact details. 
 
 ### **Returning User**
@@ -46,6 +46,7 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
 * As an Administrator it is important to me that I have the all the functionalities available to standard users while also having access to the tools required to properly manage the website.
 * As an Administrator, I should have access to the site's database and be able to easily edit information as needed. 
 * As an Administrator, I should be able to add new products to the store.
+* As an Administrator, I should be able to edit existing products within the store.
 ---
 # **Scope** 
  ## **Existing Features**
@@ -129,12 +130,12 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
     * **full_name:** This is the full name of the user who created the order.
     * **email:** This is the email address of the user who created the order.
     * **phone_number:** This is the phone number of the user who created the order.
-    * **country:** This field is used to aid in delivery, stating the country in which the order is to be deliverd.
+    * **country:** This field is used to aid in delivery, stating the country in which the order is to be delivered.
     * **postcode:** This field is used to aid in delivery, stating the postcode to which the order is to be delivered.
     * **town_or_city:** This field is used to aid in delivery, stating the town or city to which the order is to be delivered.
     * **streetaddress1:** This field is used to aid in delivery, stating the address to which the order is to be delivered.
     * **streetaddress2:** This optional field can be used to aid in delivery if necessary, further clarifying the address to which the order is to be delivered.
-    * **county:** This field is uesd to aid in delivery, stating the county to which the order is to be delivered.
+    * **county:** This field is used to aid in delivery, stating the county to which the order is to be delivered.
     * **date:** This automatically generated field states the exact time and date at which a purchase has been made.
     * **delivery_cost:** This field states the price of delivery, as determined by the calculations in the Products views.
     * **order_total:** The order total is the sum of the individual items within the order.
@@ -151,7 +152,7 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
  ---
  ### **Profiles Models**
 * **USERPROFILE:** The UserProfile model is used to define a user's details, which can then be used to pre-fill the Checkout form when they are making a purchase.
-    * **user:** This field identifies the specidic user to which the UserProfile is connected.
+    * **user:** This field identifies the specific user to which the UserProfile is connected.
     * **default_phone_number:** This is the user's phone number.
     * **default_street_address1:** This field is used to aid in delivery, stating the address to which the order is to be delivered.
     * **default_street_address2:** This optional field can be used to aid in delivery if necessary, further clarifying the address to which the order is to be delivered.
@@ -166,7 +167,7 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
     * **friendly_name:** A non-programmatic string, used to render a user-readable equivalent of the programmatic name.
 ---
 * **MEMBERSHIPS:** The Memberships model is used to track membership applications made by users. The model collects key information about the user which an admin can then review when deciding whether or not to grand membership.
-    * **user:** This field identifies the specidic user to which the membership application is connected.
+    * **user:** This field identifies the specific user to which the membership application is connected.
     * **full_name:** This is the full name of the user who created the membership application.
     * **birth_date:** This is the applicant's date of birth, used by an admin to determine if the applicant is eligible for the membership type that they're applying for.
     * **phone_number:** This is the applicant's phone number.
@@ -237,9 +238,9 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
 * The Index template is intended to be the user's first point of contact with the site.
 * A prominent hero-image immediately informs the user of the nature of the site on desktop.
 * The hero-image is not visible on mobile, in order to allow the user to access the main content immediately.
-* The Info section contains a high level overview of the cluba and some eye-catching cards explaining the benefits of joining the club and playing tennis in general.
+* The Info section contains a high level overview of the club and some eye-catching cards explaining the benefits of joining the club and playing tennis in general.
 * The Membership section uses a set of 3 cards to explain to the user the different types of membership that are available for purchase.
-* The Store section invites the user to visit the store, featuring a tactile button which uses neumorphic teckniques.
+* The Store section invites the user to visit the store, featuring a tactile button which uses neumorphic techniques.
 * The Contact section provides the user with details on the location of the club and the means of contact the user can use to get in touch with club management.
 * A mailto link is used to allow the user to quickly and easily send an email to the club using their preferred mail service.
 * The Contact section also includes an embedded Google map which allows the user to pinpoint the location of the club.
@@ -442,7 +443,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 ### **Base - Navbar**
 Expected Functionality:
 ```
-1. The navbar should display a series of navigation options which dynamically change depending on whether a user is logged in and whether or not they have superuser priviliges.
+1. The navbar should display a series of navigation options which dynamically change depending on whether a user is logged in and whether or not they have superuser privileges.
 
 2. The contents of the navbar should be replaced with a burger-menu icon on small screens.
 
@@ -579,7 +580,7 @@ Expected Functionality:
 
 3. The Product Display should display only products matching the terms used in the search box in either the product's name or the product's description (visible on the Product Detail page) when the search functionality is used. If no products match the search term, a box informing of same should be displayed.
 
-4. The Product Display should display proudcts in the order specified when the 'Sort by' button is clicked and an option is selected.
+4. The Product Display should display products in the order specified when the 'Sort by' button is clicked and an option is selected.
 ```
 Testing Procedure:
 ```
@@ -719,11 +720,11 @@ Current Status: <span style="color:green">**FUNCTIONAL**</span>
 ### **Cart - Your Cart - Cart Display**
 Expected Functionality:
 ```
-1. The Cart should display all products and their that have been added to it from the Product Detail pages. Data included in the display should include the product's image(if it has one), the procuct's name, size(if the product has sizes) SKU and price. The quantity of the product(including its size) and the subtotal associated with the specific product/size/quantity combo should also be visible.
+1. The Cart should display all products and their that have been added to it from the Product Detail pages. Data included in the display should include the product's image(if it has one), the product's name, size(if the product has sizes) SKU and price. The quantity of the product(including its size) and the subtotal associated with the specific product/size/quantity combo should also be visible.
 
 2. Each product should have a button adjustable quantity.
 
-3. The update button should reinstance the cart when clicked, updating the quantity of a specific product to that indicated in the quantity selector.
+3. The update button should re-instance the cart when clicked, updating the quantity of a specific product to that indicated in the quantity selector.
 
 4. The Remove button should remove a specific product lineitem from the list of displayed products.
 ```
