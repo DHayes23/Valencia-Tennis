@@ -570,6 +570,127 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
+### **Store - All Products - Product Display**
+Expected Functionality:
+```
+1. The Product Display should display each product within the store in an individual card.
+
+2. The Product Display should display only products belonging to to the 'Clothing' or 'Equipment' categories when their respective buttons are clicked.
+
+3. The Product Display should display only products matching the terms used in the search box in either the product's name or the product's description (visible on the Product Detail page) when the search functionality is used. If no products match the search term, a box informing of same should be displayed.
+
+4. The Product Display should display proudcts in the order specified when the 'Sort by' button is clicked and an option is selected.
+```
+Testing Procedure:
+```
+1. Navigate to the All Products display. Observe the display and note the presence of products, and that each product is displayed in its own individual card element. If the products appear in individual cards, then this feature is functional.
+
+2. Click the 'Clothing' or 'Equipment' filter buttons. Observe the entire contents of the Product Display. If the products displayed match the button clicked, and products of the other category are excluded from the display, then this feature is functional.
+
+3. Type a search term into the search box and initiate the search. Products that have the search term in either their name or their description (visible on the Product Detail page) should be displayed and all other products should be excluded from the display. If no product that matches the search term is found, a box informing of same should appear. If the correct products are displayed and the informative box appears under the above conditions, then this feature is functional.
+
+4. Click the 'Sort by' button and select one of the options. If the product display is now ordered to match your selected option, then this feature is functional.
+```
+---
+### **Store - Product Details - Quantity and Size Selectors**
+Expected Functionality:
+```
+1. The Quantity Selector should increment and decrement the amount of units to be added to the Cart. The selector should not be able to go below 1 unit and should not be able to go above 99 units. Clicking the selector increment and decrement buttons should increase or decrease the units by one with each click.
+
+2. The Size Selector should allow a selection of a size, ranging from XS to XL.
+
+3. If either selector is not valid, the user should not not be able to add the product to the cart.
+
+```
+Testing Procedure:
+```
+1. Click the increment and decrement buttons and observe the change in the unit quantity. If the quantity increases or decreases by one unit per click, then this feature is functional. The buttons should not continue to increment or decrement at 99 or 1 units respectively. If the units are so constrained, then this feature is functional.
+
+2. Click the Size Selector and note the options. If the options displayed range from XS to XL and can be selected, then this feature is functional.
+
+3. Select invalid values in the Quantity Selector and/or the Size Selector and click the 'Add to Cart' button. If clicking the button has no effect then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Store - Product Details - Product Image**
+Expected Functionality:
+```
+1. The Product Image should be displayed on the page if the product has an image. Otherwise, a placeholder image should be visible.
+
+2. If the product has an image, clicking the image should open a new tab with an enlarged version of the image.
+
+```
+Testing Procedure:
+```
+1. Note which product's detail page you are on. Check that product in the database. If that product has an image, and that image is being displayed, then this feature is functional.
+
+2. Click on the product image. If the image is opened in a new tab, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Store - Product Details - Add to Cart Button**
+Expected Functionality:
+```
+1. The Add to Cart button should add a product to the user's Cart when both a valid Quantity and Size have been selected.
+
+2. If a valid Quantity and Size have not been selected, the Add to Cart button should not add the item to the cart.
+
+```
+Testing Procedure:
+```
+1. Select a valid Quantity and Size and click the Add to Cart button. If the message system indicates that the item has been added to the Cart, and the item appears in the Cart, then this feature is functional.
+
+2. Do not select a valid Quantity and/or Size and click the Add to Cart button. If the button doesn't add the item to the Cart, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Store - Product Details - Delete Product Button/Delete Product Modal**
+Expected Functionality:
+```
+1. The Product Delete button should only be visible if the user is a superuser.
+
+2. The Delete button, when clicked, should open a modal which asks for confirmation of the deletion. If the user affirms the deletion, the product should be removed from the database.
+```
+Testing Procedure:
+```
+1. Access the Product Detail page as a non-logged in user or as a standard(non-superuser) user. If the Delete Product button is not visible, then this feature is functional. Login as a superuser, if the button is visible, then this feature is functional.
+
+2. Click the Delete button. If the Product Delete Modal opens, and asks for confirmation of deletion then this feature is functional. Click the Delete affirmation (NOTE: This will irrevocably delete the product and its data from the database). If the product deletion message is displayed and the product is removed from the database then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Products - Product Details - Edit Product Button/Edit Product Modal**
+Expected Functionality:
+```
+1. The Product Edit button should only be visible if the user is a superuser.
+
+2. The Edit button should redirect to the the Edit Product page for the specific product displayed on the Product Detail page.
+```
+Testing Procedure:
+```
+1. Access the Product Detail page as a non-logged in user or as a standard(non-superuser) user. If the Edit Product button is not visible, then this feature is functional. Login as a superuser, if the button is visible, then this feature is functional.
+
+2. Click the Edit button. If you are redirected to the correct Edit Product page, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Store - Product Details - Edit Product Button/Edit Product Modal**
+Expected Functionality:
+```
+1. Th
+```
+Testing Procedure:
+```
+1. Access 
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
  ## **Known Bugs and Issues**
  This section contains the details of any known bugs or issues affecting the site.
 ---
