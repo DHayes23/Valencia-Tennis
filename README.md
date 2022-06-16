@@ -570,7 +570,7 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Store - All Products - Product Display**
+### **Products - All Products - Product Display**
 Expected Functionality:
 ```
 1. The Product Display should display each product within the store in an individual card.
@@ -592,7 +592,7 @@ Testing Procedure:
 4. Click the 'Sort by' button and select one of the options. If the product display is now ordered to match your selected option, then this feature is functional.
 ```
 ---
-### **Store - Product Details - Quantity and Size Selectors**
+### **Products - Product Details - Quantity and Size Selectors**
 Expected Functionality:
 ```
 1. The Quantity Selector should increment and decrement the amount of units to be added to the Cart. The selector should not be able to go below 1 unit and should not be able to go above 99 units. Clicking the selector increment and decrement buttons should increase or decrease the units by one with each click.
@@ -613,7 +613,7 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Store - Product Details - Product Image**
+### **Products - Product Details - Product Image**
 Expected Functionality:
 ```
 1. The Product Image should be displayed on the page if the product has an image. Otherwise, a placeholder image should be visible.
@@ -630,7 +630,7 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Store - Product Details - Add to Cart Button**
+### **Products - Product Details - Add to Cart Button**
 Expected Functionality:
 ```
 1. The Add to Cart button should add a product to the user's Cart when both a valid Quantity and Size have been selected.
@@ -647,7 +647,7 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Store - Product Details - Delete Product Button/Delete Product Modal**
+### **Products - Product Details - Delete Product Button/Delete Product Modal**
 Expected Functionality:
 ```
 1. The Product Delete button should only be visible if the user is a superuser.
@@ -675,6 +675,55 @@ Testing Procedure:
 1. Access the Product Detail page as a non-logged in user or as a standard(non-superuser) user. If the Edit Product button is not visible, then this feature is functional. Login as a superuser, if the button is visible, then this feature is functional.
 
 2. Click the Edit button. If you are redirected to the correct Edit Product page, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Products - Add Product - Add Product Form**
+Expected Functionality:
+```
+1. The Add Product Form should only be accessible if the user is a superuser.
+
+2. When the Add Product form is filled with valid data and the Add Product button is clicked, the form should create a new product within the database.
+
+```
+Testing Procedure:
+```
+1. Both as a non-logged in user and as a logged in non-superuser, manually enter the Product Add form's url and attempt to navigate to the page. If you are instead redirect to the index page, this feature is functional. Log in with a superuser and attempt the same procedure, if you are able to access the Add Product form then this feature is functional.
+
+2. Fill out the Add Product form with valid data and click the Add Product button. If the form is submitted, check the database and/or the All Products page for the new product entry. If the product has been created then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Products - Edit Product - Edit Product Form**
+Expected Functionality:
+```
+1. The Edit Product Form should only be accessible if the user is a superuser.
+
+2. When the Edit Product form is accessed it should have all of its fields pre-filled with the product's existing data.
+
+3. When the fields within the Edit Product form are changed and the Update Product button is clicked, the product's data within the database should be updated to match the new values.
+```
+Testing Procedure:
+```
+1. Both as a non-logged in user and as a logged in non-superuser, manually enter the Product Edit form's url and attempt to navigate to the page. If you are instead redirect to the index page, this feature is functional. Log in with a superuser and attempt the same procedure, if you are able to access the Edit Product form then this feature is functional.
+
+2. Access the Edit Product form for any product. If the product's data is already present within the form, then this feature is functional.
+
+3. Access the Edit Product form for any product. Take note of the existing data within the form. Change one or more of the data values within the fields and click the Update Product button. If the product's data is updated to match the new values, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Cart - Your Cart - Cart Table**
+Expected Functionality:
+```
+1. The Cart
+```
+Testing Procedure:
+```
+1. 
 ```
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
@@ -713,6 +762,27 @@ Testing Procedure:
 1. Create an order on the site by adding items to the Cart and checking out using Stripe's test card number. When the order is complete, navigate to the My Profile page and take note of the contents of the Order History section. If your order is visible then this feature is functional.
 
 2. Click on the Order Number attached to an order displayed in the Order History section of the My Profile page. If you are redirected to that specific order's Checkout Success page, then this feature is functional. 
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Membership - Membership Application - Application Form**
+Expected Functionality:
+```
+1. The Membership Application form should only be accessible to users who have logged in.
+
+2. Clicking the Apply button on Application Form should POST the form to the database if the forms fields have been filled out with valid data.
+
+3. If an application has already been made by the logged in user, then a message should inform the user of same, and a second application should not be created. 
+
+```
+Testing Procedure:
+```
+1. Without being logged in, attempt to navigate to the Membership Application by manually entering the url. If you are prompted to log in, and cannot otherwise access the page, then this feature is functional.
+
+2. Fill the Application Form out but do not fill out a required field (e.g. Full Name). Click the Apply button. If the form is not submitted and a prompt appears to tell you which field you have not filled out, this feature is functional. Fill the form out correctly and click the Apply button. If the form is sent to the database and you are redirected to the My Profile page and a message appears to inform you that your application has been sent then this feature is functional.  
+
+3. Make an application using a logged in account. Navigate back to the Membership Application form and attempt to submit the form again. If you are redirected to the My Profile page and a message informs that you have already made an application then this feature is functional.
 ```
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
