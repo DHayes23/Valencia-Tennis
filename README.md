@@ -679,14 +679,40 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Store - Product Details - Edit Product Button/Edit Product Modal**
+### **Profiles - My Profile - My Info Form**
 Expected Functionality:
 ```
-1. Th
+1. The My Info form allows users to save their personal details for later use in the Checkout app. This form should be empty for a new user who hasn't yet made a purchase or updated the form.
+
+2. Clicking the Update button should POST the form to the database, if all inputted values are valid.
+
+3. Values entered into the form and saved should be pre-filled on the Checkout page.
+
 ```
 Testing Procedure:
 ```
-1. Access 
+1. Sign up with a new account and navigate to the My Profile page. If the form is empty by default, then this feature is functional.
+
+2. Enter invalid values into the form and click the Update button. If the form does not submit then this feature is functional. Enter valid values into the form and click the Update button. If the form is posted to the database then this feature is functional.
+
+3. Update the form as in step 2, and then add one or more items to your Cart. From within the Cart, click the Checkout button. If on the Checkout page, the form is prefilled with the values that you have entered on the My Info form, then this feature is functional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Profiles - My Profile - Order History Table**
+Expected Functionality:
+```
+1. The Order History Table should display to the user a list of their past orders on the site, including the order's Order Number, the Date on which the order was made, the Items within the order and the Total Cost of the order.
+
+2. Each order should have a clickable link attached to its Order Number. Clicking on this link should redirect to the specific Order Success page associated with the order.
+
+```
+Testing Procedure:
+```
+1. Create an order on the site by adding items to the Cart and checking out using Stripe's test card number. When the order is complete, navigate to the My Profile page and take note of the contents of the Order History section. If your order is visible then this feature is functional.
+
+2. Click on the Order Number attached to an order displayed in the Order History section of the My Profile page. If you are redirected to that specific order's Checkout Success page, then this feature is functional. 
 ```
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
