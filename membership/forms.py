@@ -8,8 +8,8 @@ class MembershipForm(forms.ModelForm):
         model = Membership
         exclude = ('user', 'date', 'application_granted', )
         widgets = {
-        'birth_date': DateInput(attrs={'type': 'date'})
-    }
+            'birth_date': DateInput(attrs={'type': 'date'})
+        }
 
     def __init__(self, *args, **kwargs):
         """
