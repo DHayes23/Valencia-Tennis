@@ -431,6 +431,33 @@ ALLOWED_HOSTS = ['your_Heroku_app_name_here.herokuapp.com', 'localhost']
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 ``` 
 ---
+ ## **Known Bugs and Issues**
+ This section contains the details of any known bugs or issues affecting the site.
+---
+---
+### **index.html - Google Maps Console Warning**
+---
+* The map implemented in the Contact section of index.html throws the following console warning:
+```
+google.maps.event.addDomListener() is deprecated, use the standard addEventListener() method instead
+```
+* As this warning refers does not hamper the usability of the site, I have chosen not to remove the current implementation of the Google map.
+---
+### **checkout.html - Country Field Colours**
+---
+* The 'country' field of the checkout form does not, in its current implementation, correctly change its colours when a valid value is selected.
+* This error is caused by the way that django-materialize handles forms.
+* The elements within the forms use dynamically generated IDs, making it difficult to correctly select the correct element when changing text colours.
+* A possible solution to this bug would be to target a different element, or to use the 'firstchild' css selector.
+* In the time available, I have attempted to implement both aforementioned solutions, however I was unable to achieve the desired result with either.
+---
+### **add_product.html/edit_product.html - Missing Form Labels**
+---
+* The form labels for the 'sku' and 'price' fields are missing from the add/edit product forms.
+* This error is again caused by the way that django-materialize handles forms.
+* During my investigation of this bug, I learned that django-materialize handles its forms very differently to the way that django-bootstrap handles them.
+* I was unable to find a satisfactory fix for this problem in the time available, and so for the time being the bug remains unfixed.
+---
  ## **Acknowledgments**
  This section contains the details of those who assisted in the development of this project.
 ---
@@ -442,3 +469,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 ### **Code Institute Student Care Team**
 ---
 * I would like to thank the Student Care Team for their work behind the scenes to ensure that students have the opportunity to work to the best of their abilities. 
+---
+### **Code Institute Tutor Team**
+---
+* I would like to thank the tutors for providing their expertise when I encountered problems throughout the development of the site.
