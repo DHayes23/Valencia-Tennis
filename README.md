@@ -740,6 +740,34 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
+### **Cart - Your Cart - Order Summary**
+Expected Functionality:
+```
+1. The Order Summary should display the total cost of the items in the Cart, the cost of their delivery and the Grand Total, which is the sum of both. 
+```
+Testing Procedure:
+```
+1. Add several different products to the cart. Note the costs in the order display and then alter the contents of the cart. If the new costs and Grand Total change accordingly, then this feature is fucntional.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
+### **Checkout - Checkout - Checkout Form**
+Expected Functionality:
+```
+1. When the Checkout form is filled out with valid data and the Pay €x Now button is clicked, a POST of a new Order should be submitted to the database containing the products that the user has selected, the user's personal and delivery details and the costs associated with the order.
+
+2. When an Order is submitted, the user's card should be charged by Stripe. (Note that for the purposes of this project, real payments are not currently enabled)
+```
+Testing Procedure:
+```
+1. Fill out the Checkout form with valid data. For the payment field, use Stripe's test card number. If the page redirects to the Checkout Success page and a new Order instance is added to the Database, then this feature is functional.
+
+2. Submit a new order according to the steps mentioned above. Log into Stripe and, using the Stripe dashboard, check that the payment has been recognised.
+```
+Current Status: <span style="color:green">**FUNCTIONAL**</span>
+
+---
 ### **Profiles - My Profile - My Info Form**
 Expected Functionality:
 ```
