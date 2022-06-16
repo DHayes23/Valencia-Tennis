@@ -81,6 +81,11 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
 * The Checkout app utilises Stripe to ensure that a user can securely and reliably make a purchase from the site. 
 * Through the use of webhooks, the Checkout app guarantees that if a payment is made, the order will reach the site operator.
  ---
+ ## **Existing Features - Membership App**
+* The Membership app allows a user to submit an application for membership status at Valencia Tennis Club.
+* The user submits a form which can later be reviewed by site administrators when deciding whether to approve the request or otherwise.
+* When the admin makes their decision, they can use the provided information to contact the applicant with details on the next steps in the application process.
+ ---
  ## **Upcoming Features**
  The following section details some of the features planned for future implementation.
  ---
