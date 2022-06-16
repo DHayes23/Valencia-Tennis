@@ -33,7 +33,7 @@ body {
   margin-top: 20px;
   margin-left: 20px;
   text-shadow: 2px 2px rgb(0, 0, 0) ;
-  font-family: Poiret One;
+  font-family: 'Poiret One';
   font-weight: bold;
   color: orangered !important;
 }
@@ -44,7 +44,7 @@ body {
   margin-right: 0px;
   padding: 0;
   text-shadow: 2px 2px rgb(0, 0, 0) ;
-  font-family: Poiret One;
+  font-family: 'Poiret One';
   font-weight: bold;
 }
 
@@ -215,7 +215,7 @@ font-weight: bold;
 padding-top: 25px;
 text-shadow: 1px 1px rgb(0, 0, 0);
 margin-bottom: 25px;
-font-family: Poiret One;
+font-family: 'Poiret One';
 }
 
 #membership-sub-heading {
@@ -223,7 +223,7 @@ color: rgb(255, 255, 255);
 text-shadow: 1px 1px rgb(0, 0, 0);
 margin-bottom: 100px;
 padding-bottom: 25px;
-font-family: Poiret One;
+font-family: 'Poiret One';
 }
 
 .membership-card {

@@ -6,9 +6,9 @@ $(document).on('click', '#signOutLink', function() {
 });
 
 $(document).ready(function(){
-    current_year = new Date().getFullYear()
+    current_year = new Date().getFullYear();
     $('#copyright-text').html(`&copy; Valencia Tennis Club ${current_year}`);
-  })
+  });
   
   // The following function initialises all Materialize JS components.
   $(document).ready(function(){
