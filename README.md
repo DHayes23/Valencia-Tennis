@@ -716,14 +716,26 @@ Testing Procedure:
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
 ---
-### **Cart - Your Cart - Cart Table**
+### **Cart - Your Cart - Cart Display**
 Expected Functionality:
 ```
-1. The Cart
+1. The Cart should display all products and their that have been added to it from the Product Detail pages. Data included in the display should include the product's image(if it has one), the procuct's name, size(if the product has sizes) SKU and price. The quantity of the product(including its size) and the subtotal associated with the specific product/size/quantity combo should also be visible.
+
+2. Each product should have a button adjustable quantity.
+
+3. The update button should reinstance the cart when clicked, updating the quantity of a specific product to that indicated in the quantity selector.
+
+4. The Remove button should remove a specific product lineitem from the list of displayed products.
 ```
 Testing Procedure:
 ```
-1. 
+1. Add one or more products to the cart and navigate to the Cart. Note whether all of the products that have been added appear in the display. If all products and their data appear in the display, then this feature is functional.
+
+2. Click the increment/decrement button associated with a particular product and note whether the quantity increases/decreases as expected. If it does, this feature is functional.
+
+3. Add a product to the cart. Change its quantity to a new value and click the update button. If the page refreshes and the new quantity is reflected in the quantity selector then this feature is functional.
+
+4. Click the remove button attached to any specific lineitem. If the lineitem is removed from the cart then this feature is functional.
 ```
 Current Status: <span style="color:green">**FUNCTIONAL**</span>
 
