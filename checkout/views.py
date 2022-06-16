@@ -13,6 +13,7 @@ from cart.contexts import cart_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -163,7 +164,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed')
+    messages.success(request, 'Order successfully processed')
 
     if 'cart' in request.session:
         del request.session['cart']
