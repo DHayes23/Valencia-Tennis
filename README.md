@@ -155,6 +155,25 @@ Access the live website at: https://dh-milestone-project-4.herokuapp.com/
     * **default_postcode:** This is the user's postcode.
     * **default_country:** This is the user's country.
 ---
+ ### **Membership Models**
+* **MEMBERSHIPTYPE:** The MembershipType model is used to categorise the type of membership that a user is requesting, be that a junior, student or standard membership.
+    * **name:** The programmatic name applied to each type of membership, e.g. 'Student'.
+    * **friendly_name:** A non-programmatic string, used to render a user-readable equivalent of the programmatic name.
+---
+* **MEMBERSHIPS:** The Memberships model is used to track membership applications made by users. The model collects key information about the user which an admin can then review when deciding whether or not to grand membership.
+    * **user:** This field identifies the specidic user to which the membership application is connected.
+    * **full_name:** This is the full name of the user who created the membership application.
+    * **birth_date:** This is the applicant's date of birth, used by an admin to determine if the applicant is eligible for the membership type that they're applying for.
+    * **phone_number:** This is the applicant's phone number.
+    * **street_address1:** This field is used to identify the applicant's home address.
+    * **street_address2:** This optional field is used by the applicant to provide further details of their home address.
+    * **town_or_city:** This is the applicant's town or city.
+    * **county:** This is the user's county of residence.
+    * **postcode:** This is the applicant's postcode.
+    * **membership_type:** This foreignkey is used to link a membership with its parent MembershipType.
+    * **application_granted:** This boolean field is used by the site admin to track whether or not the user's application has been granted.
+    
+---
   # **Skeleton** 
  ## **Site Structure**
  The following section details the layout of the website.
