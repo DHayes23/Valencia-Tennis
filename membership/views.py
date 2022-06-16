@@ -18,13 +18,19 @@ def application(request):
                 application_form = form.save(commit=False)
                 application_form.user = request.user
                 form.save()
-                messages.success(request, 'Membership application sent! You will be contacted regarding your membership within 5 working days.')
+                messages.success(
+                    request,
+                    'Membership application sent! You will be contacted regarding your membership within 5 working days.')
                 return redirect(reverse('profile'))
 
             else:
-                messages.error(request, 'Failed to submit membership application. Please check the form for missing fields.')
+                messages.error(
+                    request,
+                    'Failed to submit membership application. Please check the form for missing fields.')
         except Exception as e:
-            messages.error(request, 'You have already submitted a membership application!')
+            messages.error(
+                request,
+                'You have already submitted a membership application!')
             print(e)
             return redirect(reverse('profile'))
     else:
